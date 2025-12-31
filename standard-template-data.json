@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.2.0",
-    "generatedAt": "2025-12-31T02:23:36.222Z",
+    "version": "1.3.0",
+    "generatedAt": "2025-12-31T02:39:57.434Z",
     "templateType": "fullpage_scroll",
     "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
     "homepageId": "5c3c5977-6247-4e43-a07f-c82001f9553f"
@@ -11,9 +11,9 @@
     "name": "속초 더블유 풀빌라 스파펜션",
     "description": "",
     "subtitle": "",
-    "address": "강원특별자치도 속초시 영랑해안길 183",
-    "latitude": 38.2173470675913,
-    "longitude": 128.594530009066,
+    "address": "강원특별자치도 속초시 영랑해안길 181",
+    "latitude": 38.2172720142396,
+    "longitude": 128.594590827437,
     "contactPhone": "",
     "contactEmail": "",
     "checkin": "15:00:00",
@@ -35,10 +35,10 @@
       "펜션"
     ],
     "businessInfo": {
-      "businessName": "더블유에이",
-      "businessNumber": "122-45-96734",
-      "representativeName": "박문주",
-      "businessAddress": "강원특별자치도 속초시 영랑해안길 183 (영랑동)",
+      "businessName": "지세",
+      "businessNumber": "110-23-92280",
+      "representativeName": "유정희",
+      "businessAddress": "강원특별자치도 속초시 영랑해안길 181 (영랑동)",
       "businessPhone": "",
       "businessEmail": "",
       "businessType": "",
@@ -1716,9 +1716,9 @@
       }
     ],
     "seo": {
-      "title": "",
-      "description": "",
-      "keywords": ""
+      "title": "푸른 바다 앞 프리미엄 펜션",
+      "description": "속초 더블유 풀빌라 스파펜션",
+      "keywords": "속초펜션, 강원도펜션, 속초오션뷰펜션, 속초풀빌라, 속초풀빌라펜션, 속초스파펜션, 속초애견동반펜션, 개별바베큐"
     },
     "socialLinks": {},
     "customFields": {
