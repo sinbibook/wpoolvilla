@@ -41,8 +41,6 @@
             if (menuText) {
                 menuText.textContent = 'MENU';
             }
-
-            // No need to restore scroll since we didn't prevent it
         } else {
             // Open menu
             // Change text to CLOSE
@@ -55,8 +53,6 @@
             menuToggle.classList.add('active');
             body.classList.add('menu-open');
             if (overlayBg) overlayBg.classList.add('active');
-
-            // Keep scroll visible - don't prevent scrolling
         }
     };
 
@@ -121,14 +117,33 @@
         }
     };
 
-    // Menu Accordion Toggle
-    window.toggleMenuAccordion = function(element) {
-        const content = element.nextElementSibling;
-        if (!content || !content.classList.contains('accordion-content')) return;
+    // Initialize Accordion Menu
+    function initializeAccordionMenu() {
+        const menuItems = document.querySelectorAll('.menu-item');
 
-        element.classList.toggle('active');
-        content.classList.toggle('active');
-    };
+        // 기본적으로 모든 메뉴 열기
+        menuItems.forEach(item => {
+            item.classList.add('accordion-active');
+
+            // 타이틀 클릭 이벤트 추가
+            const title = item.querySelector('.menu-item-title');
+            if (title) {
+                title.addEventListener('click', function(e) {
+                    e.stopPropagation();
+
+                    // 다른 메뉴들 닫기 (선택적 - 한 번에 하나만 열리게 하려면)
+                    // menuItems.forEach(otherItem => {
+                    //     if (otherItem !== item) {
+                    //         otherItem.classList.remove('accordion-active');
+                    //     }
+                    // });
+
+                    // 현재 메뉴 토글
+                    item.classList.toggle('accordion-active');
+                });
+            }
+        });
+    }
 
     // Check and set header state based on scroll position
     function checkInitialScroll() {
@@ -160,6 +175,9 @@
                 toggleMenuOverlay();
             });
         }
+
+        // Initialize accordion menu
+        initializeAccordionMenu();
 
 
         // Initialize overlay click event
