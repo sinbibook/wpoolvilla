@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.5.0",
-    "generatedAt": "2025-12-31T03:37:32.220Z",
+    "version": "1.6.0",
+    "generatedAt": "2025-12-31T03:38:52.760Z",
     "templateType": "fullpage_scroll",
     "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
     "homepageId": "5c3c5977-6247-4e43-a07f-c82001f9553f"
@@ -1712,15 +1712,7 @@
     "templateType": "fullpage_scroll",
     "images": [
       {
-        "logo": [
-          {
-            "id": "4b480ac0-7489-4f8f-8f3d-842d397d0fb7",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/logo/1767150385408-yijipnlpxo.png",
-            "sortOrder": 0,
-            "description": "",
-            "isSelected": true
-          }
-        ]
+        "logo": []
       }
     ],
     "seo": {
