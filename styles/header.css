@@ -114,6 +114,11 @@ body.menu-open .transparent-header .logo-img {
     /* filter removed for PNG logo */
 }
 
+/* Body scroll lock when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
 /* YBS button changes when menu is active */
 body.menu-open .ybs-booking-btn {
     border-color: #333;
@@ -184,7 +189,7 @@ body.dark-section-active .ybs-booking-btn {
     clip-path: circle(0px at calc(100% - 60px) 40px);
     transition: clip-path 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 9999;
-    overflow-y: auto;
+    overflow: hidden; /* 메뉴 전체 영역 스크롤 방지 */
     will-change: clip-path; /* GPU 가속화 힌트 */
     transform: translateZ(0); /* 레이어 분리를 통한 성능 개선 */
     backface-visibility: hidden; /* 깜빡임 방지 */
@@ -240,11 +245,13 @@ body.dark-section-active .ybs-booking-btn {
 .menu-left-section {
     width: 50%;
     display: flex;
-    align-items: center; /* 중앙 정렬으로 되돌리기 */
+    align-items: flex-start; /* 상단 정렬 */
     justify-content: center;
-    padding: 40px; /* 패딩 줄이기 */
-    /* overflow-y 제거 - 전체 영역 스크롤 제거 */
-    /* max-height 제거 */
+    padding: 120px 40px 40px 40px; /* 상단 패딩 더 추가 (헤더 높이 고려) */
+    height: 100vh;
+    overflow-y: auto; /* 섹션 전체 스크롤 활성화 */
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 지원 */
 }
 
 /* Right Section - Image */
@@ -275,10 +282,17 @@ body.dark-section-active .ybs-booking-btn {
     transition: all 0.3s ease;
 }
 
+/* 아코디언 닫힌 상태 */
+.menu-item:not(.accordion-active) .menu-item-list {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
 .menu-item-title {
     font-size: 1rem; /* 폰트 크기 약간 줄이기 */
     font-weight: 600;
-    color: #333;
+    color: var(--color-secondary);
     margin-bottom: 15px; /* 하단 여백 줄이기 */
     letter-spacing: 0.05em;
     position: relative;
@@ -292,7 +306,24 @@ body.dark-section-active .ybs-booking-btn {
     left: 0;
     width: 100%;
     height: 1px;
-    background: #333;
+    background: var(--color-secondary);
+}
+
+/* 아코디언 화살표 */
+.menu-item-title::before {
+    content: '▼';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+    font-size: 0.7rem;
+    color: var(--color-secondary);
+    opacity: 0.7;
+}
+
+.menu-item:not(.accordion-active) .menu-item-title::before {
+    transform: translateY(-50%) rotate(-90deg);
 }
 
 
@@ -300,9 +331,10 @@ body.dark-section-active .ybs-booking-btn {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 200px; /* 최대 높이 줄이기 */
-    overflow-y: auto; /* 많을 때 스크롤 */
-    padding-right: 5px; /* 스크롤바 공간 */
+    max-height: 500px; /* 아코디언 열렸을 때 최대 높이 */
+    overflow: hidden; /* 스크롤 제거 */
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
 }
 
 .menu-item-list li {
@@ -354,26 +386,24 @@ body.dark-section-active .ybs-booking-btn {
     transform: scale(1.05);
 }
 
-/* Custom scrollbar for menu lists */
-.menu-item-list::-webkit-scrollbar {
-    width: 4px;
+/* Custom scrollbar for menu-left-section */
+.menu-left-section::-webkit-scrollbar {
+    width: 6px;
 }
 
-.menu-item-list::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
+.menu-left-section::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
 }
 
-.menu-item-list::-webkit-scrollbar-thumb {
+.menu-left-section::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.menu-left-section::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
 }
-
-.menu-item-list::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/* menu-left-section 스크롤바 제거 - 전체 영역 스크롤 사용 안함 */
 
 /* ================================
    Mobile Responsive
@@ -451,7 +481,10 @@ body.dark-section-active .ybs-booking-btn {
 
     .menu-left-section {
         width: 100%;
-        padding: 130px 30px 0 20px;
+        padding: 100px 30px 30px 20px;
+        height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 지원 */
     }
     
     .menu-right-section {
