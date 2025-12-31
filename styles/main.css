@@ -1,0 +1,326 @@
+/* ================================
+   Main Page Styles
+   ================================ */
+
+/* Main page specific overrides - using common hero styles */
+
+/* Main About Section - Below marquee */
+.main-about-section {
+    padding: 80px 20px;
+    min-height: 700px;
+    background: var(--color-primary);
+    text-align: center;
+    position: relative;
+}
+
+.main-about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    background-image: url('../images/shadow1.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateX(var(--parallax-x, 0));
+    transition: transform 0.15s ease-out;
+}
+
+.main-about-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.main-about-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-about-description {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    transition-delay: 0.2s;
+}
+
+.main-about-description.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation - Slide up from bottom */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Intro Section - Dynamic blocks */
+.intro-section {
+    background: var(--color-primary);
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Reverse layout for even blocks (2nd, 4th, etc) */
+.intro-block:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.intro-block:nth-child(even) .intro-block-content {
+    text-align: left;
+}
+
+/* Last block gets extra padding bottom */
+.intro-block:last-child {
+    padding-bottom: 100px;
+}
+
+.intro-block-image {
+    position: relative;
+    width: 55%;
+    height: 500px;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease;
+}
+
+.intro-block-image.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Even blocks - image slides from right */
+.intro-block:nth-child(even) .intro-block-image {
+    transform: translateX(50px);
+}
+
+.intro-block:nth-child(even) .intro-block-image.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation - Slide from left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation - Slide from right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 1px green border */
+.intro-block-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 1;
+}
+
+/* White padding area */
+.intro-block-image::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: var(--color-primary);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 2;
+}
+
+.intro-block-image img {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 3;
+}
+
+.intro-block-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding-left: 20px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+    transition-delay: 0.2s;
+}
+
+.intro-block-content.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Even blocks - content slides from left */
+.intro-block:nth-child(even) .intro-block-content {
+    transform: translateX(-50px);
+}
+
+.intro-block:nth-child(even) .intro-block-content.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.intro-block-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+}
+
+.intro-block-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-property-title {
+        font-size: 2.5rem;
+        bottom: 80px;
+    }
+
+    .main-about-section {
+        padding: 60px 20px;
+    }
+
+    .main-about-section::before {
+        width: 90%;
+    }
+
+    .main-about-title {
+        font-size: 1.7rem;
+    }
+
+    .main-about-description {
+        font-size: 1rem;
+    }
+
+    /* Intro Section Mobile */
+    .marquee-section {
+        margin-top: 100px;
+    }
+
+    .intro-section {
+       padding: 0px 20px 60px 20px;
+    }
+
+    .intro-block {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    /* 모바일에서는 row-reverse 제거 */
+    .intro-block:nth-child(even) {
+        flex-direction: column;
+    }
+
+    /* 모바일에서 짝수 번째 블록의 콘텐츠도 중앙 정렬 */
+    .intro-block:nth-child(even) .intro-block-content {
+        text-align: center;
+    }
+
+    /* 모바일에서 마지막 블록 패딩 제거 */
+    .intro-block:last-child {
+        padding-bottom: 0;
+    }
+
+    .intro-block-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .intro-block-content {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .intro-block-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .intro-block-description {
+        font-size: 1rem;
+    }
+}

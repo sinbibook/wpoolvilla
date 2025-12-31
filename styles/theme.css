@@ -1,0 +1,12 @@
+/* CDN Fonts */
+@import url('https://fonts.cdnfonts.com/css/noto-serif-kr');
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
+
+/* CSS Variables */
+:root {
+  --font-ko-main: 'Noto Serif KR', sans-serif;
+  --font-ko-sub: 'Noto Serif KR', sans-serif;
+  --font-en-main: 'Oooh Baby', sans-serif;
+  --color-primary: #FCFCFC;
+  --color-secondary: #577185;
+}

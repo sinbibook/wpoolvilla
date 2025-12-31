@@ -1,0 +1,1648 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "2025-12-31T01:55:15.389Z",
+    "templateType": "fullpage_scroll",
+    "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+    "homepageId": "5c3c5977-6247-4e43-a07f-c82001f9553f"
+  },
+  "property": {
+    "id": "a0c6c135-924b-4627-bc31-303bbded79a2",
+    "name": "속초 더블유 풀빌라 스파펜션",
+    "description": "",
+    "subtitle": "",
+    "address": "강원특별자치도 속초시 영랑해안길 183",
+    "latitude": 38.2173470675913,
+    "longitude": 128.594530009066,
+    "contactPhone": "",
+    "contactEmail": "",
+    "checkin": "15:00:00",
+    "checkout": "11:00:00",
+    "checkInOutInfo": "[펜션 안내 사항]\n1. 전객실 호텔식 침구류 제공\n2. A동 반려견 동반 불가 \n3. 객실 내 육류, 튀김류, 생선류 조리 금지 , 개인 취사도구 반입 금지입니다\n4. 펜션의 객실요금은 각 객실의 기준인원이 이용할 수 있는 요금으로 기준인원이 넘어가는 추가인원에 대한 비용은 별도 지불하셔야 합니다.\n5. 예약 인원에서 인원이 추가되는 경우 펜션에 미리 연락을 주시기 바랍니다.\n6. 전객실 금연입니다.",
+    "usageGuide": "[입/퇴실 안내]\n - 입실시각: 15시\n - 퇴실시각: 11시\n ※ 22시 이후 입실 시 펜션에 사전 문의 부탁드립니다.\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n\n[실내 개별바베큐]\n- 객실 내 전기그릴(자이글) 사용\n- 이용 금액 : 20,000원 (현장결제)\n- 육류만 가능 / 해산물은 자이글 불가\n* 개인 전기그릴 반입 및 사용은 불가합니다. \n* 사용 후 객실 밖에 주시면 수거합니다.\n\n[실내풀빌라]\n- 개별실내풀빌라 객실 : A601\n- 이용 시간 : 입실 후 ~ 22시까지\n- 미온수 비용 : 7만원(현장결제)\n- 미온수는 입실 전 날까지 사전 예약해주세요\n- 온도 : 7~8월 30도 / 이외 34도 \n* 2층 실외 풀빌라 객실은 7~8월만 운영\n\n[실외 풀빌라]\n* 2층 실외 풀빌라 객실은 7~8월만 운영(찬물)\n- 실외풀빌라 객실 : A201,A202\n- 이용 시간 : 입실 후 ~ 22시까지 \n- 찬물만 가능 / 무료\n\n[루프탑 실외 수영장]\n- 비용: 무료\n- 운영기간: 하절기 운영 (26년 7~8월 예정)\n- 이용복장: 수영복\n\n[스파]\n- 전 객실 오션뷰 스파가능\n- 무료 이용 가능\n- 입욕제는 사용 불가합니다.\n\n[서비스]\n- 전 객실 와이파이 가능\n- 넷플릭스, 유튜브 시청 가능 (개인계정 사용)\n\n[어메니티]\n- 호텔식 침구 제공\n- 객실 내 어메니티 비치 (칫솔, 치약, 비누, 샤워타올 등)",
+    "reservationGuide": "미성년자는 보호자 없이 예약 및 입실 불가하며, 위반 시 환불 없이 퇴실됩니다.\n객실 요금은 기준 인원 기준이며, 초과 시 추가 요금이 발생합니다.\n최대 인원 초과 시 입실 불가하며, 이로 인한 환불은 불가입니다. (유아, 어린이 포함)\n현장 추가 요금은 숙소 측에 사전 확인 바랍니다.\n수영장 등 부대시설은 날씨나 상황에 따라 이용이 제한될 수 있으니 사전 확인 바랍니다.\n당일 예약 후 취소 시 환불 불가하며, 늦은 시간 당일 예약 후 즉시 방문 시 입실 불가할 수 있으니 숙소 확인 후 예약해 주세요.\n취소 수수료는 구매처마다 다를 수 있습니다.\n시스템 오류로 인해 정상가와 다른 금액으로 예약이 진행된 경우, 부득이하게 예약이 취소될 수 있습니다.\n전 객실 금연이며, 흡연은 지정된 장소에서만 가능합니다.",
+    "province": "강원특별자치도",
+    "city": "속초시",
+    "amenities": [],
+    "nearbyAttractions": [
+      "해변"
+    ],
+    "services": [],
+    "propertyThemes": [
+      "오션뷰"
+    ],
+    "propertyTypes": [
+      "펜션"
+    ],
+    "businessInfo": {
+      "businessName": "더블유에이",
+      "businessNumber": "122-45-96734",
+      "representativeName": "박문주",
+      "businessAddress": "강원특별자치도 속초시 영랑해안길 183 (영랑동)",
+      "businessPhone": "",
+      "businessEmail": "",
+      "businessType": "",
+      "businessCategory": "",
+      "eCommerceRegistrationNumber": ""
+    },
+    "contractInfo": {
+      "contractStartDate": "2025-09-10T00:00:00.000Z",
+      "contractEndDate": "2025-09-12T00:00:00.000Z",
+      "contractStatus": "active",
+      "contactName": "담당자명",
+      "contactEmail": "담당자 이메일",
+      "contactPhone": "담당자 전화번호",
+      "paymentTerms": null,
+      "cancellationPolicy": null,
+      "bankName": "은행명",
+      "accountNumber": "계좌번호",
+      "accountHolder": "예금주",
+      "commissionRate": 0,
+      "securityDeposit": 0
+    },
+    "facilities": [
+      {
+        "id": "69e2885c-4500-4324-b9f3-9d212dd56673",
+        "name": "개별 수영장",
+        "description": "[실내풀빌라]\n- 개별실내풀빌라 객실 : A601\n- 이용 시간 : 입실 후 ~ 22시까지\n- 미온수 비용 : 7만원(현장결제)\n- 미온수는 입실 전 날까지 사전 예약해주세요\n- 온도 : 7~8월 30도 / 이외 34도 \n* 2층 실외 풀빌라 객실은 7~8월만 운영\n\n[실외 풀빌라]\n* 2층 실외 풀빌라 객실은 7~8월만 운영(찬물)\n- 실외풀빌라 객실 : A201,A202\n- 이용 시간 : 입실 후 ~ 22시까지 \n- 찬물만 가능 / 무료",
+        "usageGuide": "[실내풀빌라]\n- 개별실내풀빌라 객실 : A601\n- 이용 시간 : 입실 후 ~ 22시까지\n- 미온수 비용 : 7만원(현장결제)\n- 미온수는 입실 전 날까지 사전 예약해주세요\n- 온도 : 7~8월 30도 / 이외 34도 \n* 2층 실외 풀빌라 객실은 7~8월만 운영\n\n[실외 풀빌라]\n* 2층 실외 풀빌라 객실은 7~8월만 운영(찬물)\n- 실외풀빌라 객실 : A201,A202\n- 이용 시간 : 입실 후 ~ 22시까지 \n- 찬물만 가능 / 무료",
+        "displayOrder": 0,
+        "images": [
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767083581328-5hmre1gmqy.jpg",
+            "sortOrder": 0,
+            "description": "개별 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083369-t4b80np9ovr.jpg",
+            "sortOrder": 2,
+            "description": "개별 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083369-npbb8wvu9.jpg",
+            "sortOrder": 0,
+            "description": "개별 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083369-8j78h3slp8.jpg",
+            "sortOrder": 1,
+            "description": "개별 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083370-xpa03rlw7ga.jpg",
+            "sortOrder": 3,
+            "description": "개별 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083370-oavwcsra5t8.jpeg",
+            "sortOrder": 4,
+            "description": "개별 수영장",
+            "isSelected": true
+          }
+        ]
+      },
+      {
+        "id": "733049e9-83d0-4569-8d42-8622a4adbd7b",
+        "name": "루프탑 실외 수영장",
+        "description": "[루프탑 실외 수영장]\n- 비용: 무료\n- 운영기간: 하절기 운영 (26년 7~8월 예정)\n- 이용복장: 수영복",
+        "usageGuide": "[루프탑 실외 수영장]\n- 비용: 무료\n- 운영기간: 하절기 운영 (26년 7~8월 예정)\n- 이용복장: 수영복",
+        "displayOrder": 1,
+        "images": [
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767083583183-onvzuqxxo8c.jpg",
+            "sortOrder": 0,
+            "description": "루프탑 실외 수영장",
+            "isSelected": false
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767083583184-g7rbjqne235.jpeg",
+            "sortOrder": 1,
+            "description": "루프탑 실외 수영장",
+            "isSelected": false
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-71ywmhw9awg.jpg",
+            "sortOrder": 3,
+            "description": "루프탑 실외 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-dznz1ieozo.jpg",
+            "sortOrder": 4,
+            "description": "루프탑 실외 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-adhpgmwadip.jpg",
+            "sortOrder": 2,
+            "description": "루프탑 실외 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-3frn5tu22n3.jpg",
+            "sortOrder": 0,
+            "description": "루프탑 실외 수영장",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-j6uu8c0p4zc.jpg",
+            "sortOrder": 1,
+            "description": "루프탑 실외 수영장",
+            "isSelected": true
+          }
+        ]
+      },
+      {
+        "id": "4b7041f4-03f5-452a-b5c2-e80487ab4db3",
+        "name": "스파",
+        "description": "[스파]\n- 전 객실 오션뷰 스파가능\n- 무료 이용 가능\n- 입욕제는 사용 불가합니다.",
+        "usageGuide": "[스파]\n- 전 객실 오션뷰 스파가능\n- 무료 이용 가능\n- 입욕제는 사용 불가합니다.",
+        "displayOrder": 2,
+        "images": [
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767083584688-et6pfa63j9b.jpeg",
+            "sortOrder": 0,
+            "description": "스파",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086895-kc5sd5b0en.jpg",
+            "sortOrder": 1,
+            "description": "스파",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086895-0revyzcjzueo.jpeg",
+            "sortOrder": 2,
+            "description": "스파",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086895-yded0mk1mef.jpg",
+            "sortOrder": 3,
+            "description": "스파",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086896-scqvwcywdos.jpg",
+            "sortOrder": 4,
+            "description": "스파",
+            "isSelected": true
+          },
+          {
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086895-2znujg5ic04.jpg",
+            "sortOrder": 0,
+            "description": "스파",
+            "isSelected": true
+          }
+        ]
+      }
+    ],
+    "refundPolicies": [
+      {
+        "refundProcessingDays": 10,
+        "refundRate": 100
+      },
+      {
+        "refundProcessingDays": 9,
+        "refundRate": 90
+      },
+      {
+        "refundProcessingDays": 8,
+        "refundRate": 80
+      },
+      {
+        "refundProcessingDays": 7,
+        "refundRate": 70
+      },
+      {
+        "refundProcessingDays": 6,
+        "refundRate": 60
+      },
+      {
+        "refundProcessingDays": 5,
+        "refundRate": 50
+      },
+      {
+        "refundProcessingDays": 4,
+        "refundRate": 40
+      },
+      {
+        "refundProcessingDays": 3,
+        "refundRate": 30
+      },
+      {
+        "refundProcessingDays": 2,
+        "refundRate": 20
+      },
+      {
+        "refundProcessingDays": 1,
+        "refundRate": 10
+      },
+      {
+        "refundProcessingDays": 0,
+        "refundRate": 0
+      }
+    ],
+    "refundSettings": {
+      "customerRefundNotice": "",
+      "immediateRefundEnabled": false,
+      "immediateRefundTimeLimit": "60"
+    },
+    "images": [
+      {
+        "thumbnail": [
+          {
+            "id": "a183fca1-449c-43db-96b8-0bfcbb23aa21",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-egpcuwxyhpp.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": false
+          },
+          {
+            "id": "529ca245-4219-4a6a-8fb9-488521703cef",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-tlf7jfgar.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": false
+          },
+          {
+            "id": "aee57d7c-e8d6-4474-80c0-0adb4506dc5a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-40a66lfrzba.jpg",
+            "sortOrder": 5,
+            "description": "",
+            "isSelected": false
+          },
+          {
+            "id": "8c417119-984c-4086-9372-7e86291f273a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-2kkrbv3s9ok.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": false
+          },
+          {
+            "id": "f60cb2f9-4649-4553-8dfe-95f5e6ecc20e",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579144-y9p21fz90n.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": false
+          },
+          {
+            "id": "a7d9b582-81c5-4dc9-af99-1d049fded4ac",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-segeorbr0m9.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          }
+        ],
+        "exterior": [
+          {
+            "id": "5bed8e65-9eb5-4524-878d-f5a733e7ee56",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/exterior/1767083579146-vkb1qe4pwp.jpg",
+            "sortOrder": 0,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "f836f266-663b-414d-a970-02af29d00fd8",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/exterior/1767083579146-l0nho4kswqe.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "3a5d1d7a-255c-4bd6-afd7-f51c8340dde3",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/exterior/1767083579146-guio61czyyi.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "c9452a60-9ccb-4c48-9edf-2fbac3c9121a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/exterior/1767083579146-w7ety94m7t.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": true
+          },
+          {
+            "id": "48a1287d-16f6-4b3a-8057-2551349bf57a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/exterior/1767083579145-ahx7mduk8t7.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": true
+          }
+        ],
+        "surrounding": [],
+        "commonArea": []
+      }
+    ],
+    "nameEn": "Sokcho W Spa PoolVilla",
+    "domain": "wpoolvilla.kr",
+    "realtimeBookingId": "",
+    "ybsId": ""
+  },
+  "rooms": [
+    {
+      "id": "fd5b63c1-66db-4ea8-a804-bdf97b2257ac",
+      "name": "A601(풀오션뷰,실내풀빌라,스파,테라스)",
+      "description": "펜트하우스룸 : 프라이빗온수풀 + 스파 + 개별테라스 + 침실 + 주방 + 샤워실 + 화장실\n침대 2개 : 킹1+싱글1\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "펜트하우스룸 : 프라이빗온수풀 + 스파 + 개별테라스 + 침실 + 주방 + 샤워실 + 화장실\n침대 2개 : 킹1+싱글1\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A601(풀오션뷰,실내풀빌라,스파,테라스)",
+      "size": 125,
+      "baseOccupancy": 3,
+      "maxOccupancy": 6,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드",
+        "싱글 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "풀빌라",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [
+            {
+              "id": "4e8f6e7f-a052-4041-80c2-5a675ae968db",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/thumbnail/1767142693781-0t47nncnz8qh.jpg",
+              "sortOrder": 0,
+              "description": "",
+              "isSelected": true
+            }
+          ],
+          "interior": [
+            {
+              "id": "3e427c6a-8de8-4ed0-82e5-7fba6dd7b2be",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693782-w2wtt51djmd.jpg",
+              "sortOrder": 1,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "cea896ab-bf05-4d1c-beac-16c2158cb4da",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693782-zik7xl1jf9.jpg",
+              "sortOrder": 2,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "e04ada22-30ea-4333-b444-d37acdbb1f5b",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693782-u9r6hkt8d7.jpg",
+              "sortOrder": 3,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "622bfcd5-d4b1-4227-9b9c-36ee51b170c6",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693782-v07xlrglje.jpg",
+              "sortOrder": 4,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "36dec9c7-5529-4910-8ca4-2627295295de",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693782-c0z865mkbzo.jpg",
+              "sortOrder": 5,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "53dbd07d-d9fc-48e8-9c58-e07619f8d5aa",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693783-erfjs9a0owt.jpg",
+              "sortOrder": 6,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "a0569e26-7159-492a-a29b-c4b44aadeff1",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693783-bfvljd2cl96.jpg",
+              "sortOrder": 7,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "dfb74163-c0f3-483f-b784-0175154fb389",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693783-6lq43w7uttf.jpg",
+              "sortOrder": 8,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "9346859f-7525-4ae7-849e-f82e26ed6843",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693783-ozbqbx5kjs.jpg",
+              "sortOrder": 9,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "357fb1c6-8bd4-4942-bda1-e509f0c5c068",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693783-n78ocbdmxw.jpg",
+              "sortOrder": 10,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "af3734de-ec97-42c6-a1f1-94768aafb2c0",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693783-5doejlj067y.jpg",
+              "sortOrder": 11,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "efcbbbb3-b92a-4a09-b152-d91f4bd2f240",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693783-djj17mkiqwq.jpg",
+              "sortOrder": 12,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "1d9b1599-3e2d-48ce-bf48-b57e3c2db7e2",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/interior/1767142693783-ozododr00jl.jpg",
+              "sortOrder": 13,
+              "description": "",
+              "isSelected": true
+            }
+          ],
+          "exterior": [
+            {
+              "id": "87f47c29-db6c-4620-938b-bd6008824761",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/exterior/1767142693783-qektrqqhq8q.jpg",
+              "sortOrder": 14,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "732cd6ba-572b-4143-ae0f-3308476b18f5",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/exterior/1767142693783-29fa1h57n5q.jpg",
+              "sortOrder": 15,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "66002040-49e0-4ac7-b6eb-da0456f73566",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/exterior/1767142693784-v6assg60ter.jpg",
+              "sortOrder": 16,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "78475149-f055-47e5-aa39-8477352381ce",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/fd5b63c1-66db-4ea8-a804-bdf97b2257ac/exterior/1767142693784-81udv4hnz5c.jpg",
+              "sortOrder": 17,
+              "description": "",
+              "isSelected": true
+            }
+          ]
+        }
+      ],
+      "displayOrder": 1
+    },
+    {
+      "id": "79423ca7-64f0-4ac5-9ca6-b3c2f29086f1",
+      "name": "A502(풀오션뷰,스파,테라스)",
+      "description": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A502(풀오션뷰,스파,테라스)",
+      "size": 56,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [
+            {
+              "id": "a4030dca-9671-40b7-8ec1-637eda40c0ee",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/thumbnail/1767142971778-k4abgu0kyr.jpg",
+              "sortOrder": 0,
+              "description": "",
+              "isSelected": true
+            }
+          ],
+          "interior": [
+            {
+              "id": "885755bb-de60-45f7-9ea1-28861df283b3",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/interior/1767142971778-bredz454qe5.jpg",
+              "sortOrder": 1,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "e4eb5f52-a415-490a-92af-a2375420270c",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/interior/1767142971778-exrzmkwbd1c.jpg",
+              "sortOrder": 2,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "f87c95aa-75f3-4fcc-923e-9ad6dc78c359",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/interior/1767142971778-6hp90ycadg8.jpg",
+              "sortOrder": 3,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "d67d2a15-4e93-4f20-86d9-95c183117135",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/interior/1767142971779-tbdhzjuvpr.jpg",
+              "sortOrder": 4,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "b036f7ce-5b64-494b-b4ff-6494ad4b13b1",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/interior/1767142971779-l5tc1px9wdr.jpg",
+              "sortOrder": 5,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "5558f71b-2909-41db-a865-c569777849fb",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/interior/1767142971779-vv9uxj2y01.jpg",
+              "sortOrder": 6,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "8bd4afb8-0178-44aa-953c-cc2b8a46aef6",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/interior/1767142971845-z3ietk2q539.jpg",
+              "sortOrder": 7,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "79adc9ec-2f61-49cd-8847-3689ea864aff",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/interior/1767142971845-nbaar9hpg9e.jpg",
+              "sortOrder": 8,
+              "description": "",
+              "isSelected": true
+            }
+          ],
+          "exterior": [
+            {
+              "id": "bed7fd57-c13d-439f-8530-5213596f58a2",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/exterior/1767142971845-o01ekzyw1qk.jpg",
+              "sortOrder": 9,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "8f22db80-9d69-4bfc-87b7-60728a30c6ca",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/exterior/1767142971845-56ywbywjdh9.jpg",
+              "sortOrder": 10,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "1e9c29f5-af71-4ef5-8f63-96e9b40a0089",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/exterior/1767142971845-l67r65ziytj.jpg",
+              "sortOrder": 11,
+              "description": "",
+              "isSelected": true
+            },
+            {
+              "id": "adea2f7e-5ef4-43f0-8fab-4bee3d12e216",
+              "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/roomtype/79423ca7-64f0-4ac5-9ca6-b3c2f29086f1/exterior/1767142971845-nfbqbvcizik.jpg",
+              "sortOrder": 12,
+              "description": "",
+              "isSelected": true
+            }
+          ]
+        }
+      ],
+      "displayOrder": 2
+    },
+    {
+      "id": "a5040ea4-40e1-4a46-9a2e-0531ecce7dc0",
+      "name": "A501(풀오션뷰,스파)",
+      "description": "침대룸 : 스파+침대1+주방+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "침대룸 : 스파+침대1+주방+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A501(풀오션뷰,스파)",
+      "size": 49,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 3
+    },
+    {
+      "id": "84cc179a-a311-4662-92af-391489c9899b",
+      "name": "A402(풀오션뷰,스파)",
+      "description": "침대룸 : 스파+침대1+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "침대룸 : 스파+침대1+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A402(풀오션뷰,스파)",
+      "size": 49,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 4
+    },
+    {
+      "id": "5d930913-b39a-4097-b813-a86cb7a43fb2",
+      "name": "A401(풀오션뷰,스파,테라스)",
+      "description": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A401(풀오션뷰,스파,테라스)",
+      "size": 56,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 5
+    },
+    {
+      "id": "4c44586f-45fb-4f51-b886-15082f941da1",
+      "name": "A302(풀오션뷰,스파,테라스)",
+      "description": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A302(풀오션뷰,스파,테라스)",
+      "size": 56,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 6
+    },
+    {
+      "id": "a2a8101f-93c1-430b-830f-dd56eee8261e",
+      "name": "A301(풀오션뷰,스파)",
+      "description": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A301(풀오션뷰,스파)",
+      "size": 49,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 7
+    },
+    {
+      "id": "1827105d-be33-4d7d-bf3e-67f23c063fcb",
+      "name": "A202(풀오션뷰,스파,테라스)",
+      "description": "침대룸 : 프라이빗야외풀+스파+개별테라스+침대2+주방+샤워실+화장실\n야외풀빌라 미온수 불가(7~8월 운영)\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "침대룸 : 프라이빗야외풀+스파+개별테라스+침대2+주방+샤워실+화장실\n야외풀빌라 미온수 불가(7~8월 운영)\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A202(풀오션뷰,스파,테라스)",
+      "size": 56,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 8
+    },
+    {
+      "id": "9f8997ae-c2a2-4d60-b4b6-7db62fb96e04",
+      "name": "A201(풀오션뷰,와이드테라스,스파)",
+      "description": "침대룸 : 프라이빗야외풀+스파+개별테라스+침실+주방+샤워실+화장실\n야외풀빌라 미온수 불가(7~8월만 운영)\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "roomInfo": "침대룸 : 프라이빗야외풀+스파+개별테라스+침실+주방+샤워실+화장실\n야외풀빌라 미온수 불가(7~8월만 운영)\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생",
+      "group": "A201(풀오션뷰,와이드테라스,스파)",
+      "size": 56,
+      "baseOccupancy": 2,
+      "maxOccupancy": 4,
+      "totalRoomCount": {
+        "bedroom": 1,
+        "bathroom": 0,
+        "livingRoom": 0
+      },
+      "bedTypes": [
+        "킹 베드"
+      ],
+      "amenities": [
+        "무료 WiFi",
+        "스마트 TV",
+        "에어컨",
+        "냉장고",
+        "전자레인지",
+        "헤어드라이어",
+        "인덕션",
+        "전기밥솥",
+        "전기포트",
+        "샴푸",
+        "린스",
+        "바디워시",
+        "OTT",
+        "개별바비큐",
+        "금연"
+      ],
+      "roomViews": [
+        "오션뷰",
+        "바다전망(씨뷰)"
+      ],
+      "roomStructures": [],
+      "status": "active",
+      "images": [
+        {
+          "thumbnail": [],
+          "interior": [],
+          "exterior": []
+        }
+      ],
+      "displayOrder": 9
+    }
+  ],
+  "homepage": {
+    "domain": "wpoolvilla.kr",
+    "templateType": "fullpage_scroll",
+    "images": [
+      {
+        "logo": []
+      }
+    ],
+    "seo": {
+      "title": "",
+      "description": "",
+      "keywords": ""
+    },
+    "socialLinks": {},
+    "customFields": {
+      "pages": {
+        "index": {
+          "sections": [
+            {
+              "hero": {
+                "title": "속초 더블유 풀빌라 스파펜션",
+                "images": [
+                  {
+                    "id": "2fb4ff8c-d9fd-4938-98d3-3eb5f2115fdd",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1767143252679-1hv7wr9q63j.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "ff7e08fe-7beb-4c26-abce-6e38f8a5fb5f",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1767143252680-2w7hi32oeth.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "2daea19e-6fa3-44a2-b201-a2f23765f871",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1767143252680-tbfsq504lih.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "b1e10aa4-a136-49fc-90da-9272ada1e4ef",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1767143252680-p4jooznspl.jpg",
+                    "sortOrder": 3,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "1397d654-a092-418d-a402-c90d8c702f3a",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1767143252680-0pym12mc4zeq.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "5d63ad43-7664-4a0f-9ad8-e3fb33043762",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1767143252681-turyb4r0iw.jpg",
+                    "sortOrder": 5,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "56f108d9-502d-441f-a6e8-d186332aeb1d",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1767143252681-8s8xbvewcok.jpg",
+                    "sortOrder": 6,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ],
+                "description": "동해바다와 가장 가까운 곳"
+              },
+              "closing": {
+                "title": "",
+                "images": [
+                  {
+                    "id": "318d31c5-1080-4e60-b12b-39abef6c9a20",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_closing/1767145275396-z6c6q1l3je8.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "8198d359-d24f-4d34-a403-a6ed6fee67c5",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_closing/1767145275396-dz16ixvo1z.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "c5081aee-114d-4c94-88f7-d615aa534cf6",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_closing/1767145275396-j4t3nx2yldl.jpeg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "9bddc605-4ffd-45bb-b6fb-528c8b13471f",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_closing/1767145275396-qo0mimfhj2.jpg",
+                    "sortOrder": 3,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "0076730d-68ab-424a-94f9-15a91cb33705",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_closing/1767145275396-1ytlawcquse.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": false
+                  }
+                ]
+              },
+              "essence": {
+                "title": "프리미엄 오션뷰 풀빌라",
+                "images": [
+                  {
+                    "id": "caa62126-96e6-41bc-a770-81e5ef6bc9b9",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_essence/1767144746065-k3qhnyznzb.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "a926cabd-35f5-469d-8df4-fd246d559cc3",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_essence/1767145275395-4w0s0r54u6r.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "dad06417-f81f-41c1-9da6-dc71c299d542",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_essence/1767145275396-eoi1yf9rww.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "323c730d-2ffd-4c08-bb9f-9a417c010747",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_essence/1767145275396-pfylvvfheb.jpg",
+                    "sortOrder": 3,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "82239c0d-d416-4771-a485-d8b0e31a9d3e",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_essence/1767145275396-4kobwp4z0bq.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ],
+                "description": "속초 바다 바로 앞에서 마주하는 탁 트인 오션뷰,\n프라이빗 스파와 풀빌라 시설로 완성되는 여유로운 휴식.\n바다와 가장 가까운 자리에서 프리미엄한 하루를 경험하세요."
+              },
+              "gallery": {
+                "title": "GALLERY",
+                "images": [
+                  {
+                    "id": "cac9e5bd-ef52-4e75-97ac-6dc07c428b39",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144746065-zs450ztc6zq.jpeg",
+                    "sortOrder": 0,
+                    "description": "오션뷰 프라이빗풀",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "0593797d-6dd1-41f7-8090-441f758454d3",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144746065-pfhgapwgy9m.jpg",
+                    "sortOrder": 1,
+                    "description": "넓고 깨끗한 객실",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "6a8dbe90-1d34-4455-a7e7-26f272ec900c",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144746065-ygvekgb6tgj.jpeg",
+                    "sortOrder": 2,
+                    "description": "오션뷰 스파",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "59e7e6f4-8799-4f54-93ae-2b676f412b5c",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144746065-7kduf82x6s4.jpg",
+                    "sortOrder": 3,
+                    "description": "오션뷰 프라이빗풀",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "5c638928-a149-4adb-87fb-c10e2b8214d5",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144746065-lr7zkktldqn.jpg",
+                    "sortOrder": 4,
+                    "description": "정면 오션뷰",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "aa99cacc-de4e-4c3c-8773-528304984621",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144869774-3uioxcthgff.jpg",
+                    "sortOrder": 5,
+                    "description": "외경",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "36a47d50-d112-42da-926a-f3e3431ede23",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144869774-ift8hizmovr.jpg",
+                    "sortOrder": 6,
+                    "description": "루프탑 수영장",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "67621b89-d2dd-4759-84c5-4ea57f1cf1da",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144746065-84qksv7f3p2.jpg",
+                    "sortOrder": 7,
+                    "description": "오션뷰 스파",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "91c1885a-5571-48bd-871b-c32687db3b9b",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144869774-9yg1ickmqt.jpg",
+                    "sortOrder": 8,
+                    "description": "바다 바로 앞",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "44f59871-c950-4e4d-b627-0abac00e1fc6",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144746065-fy6egrbrk5h.jpg",
+                    "sortOrder": 9,
+                    "description": "정면 오션뷰",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "1e290a6a-d87c-4ce8-aad5-52a88c4174a7",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144869774-1yy3pt65kpih.jpg",
+                    "sortOrder": 10,
+                    "description": "등대해수욕장",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "6fe5ca24-ca3b-47d5-8d33-ab6b06255161",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144746065-u50c42m15fb.jpg",
+                    "sortOrder": 11,
+                    "description": "오션뷰 프라이빗풀",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "ff671327-a070-4b83-be70-5f14a13d4097",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_gallery/1767144869774-ihm6060bt3.jpg",
+                    "sortOrder": 12,
+                    "description": "루프탑 수영장",
+                    "isSelected": true
+                  }
+                ],
+                "description": "\n"
+              },
+              "signature": {
+                "title": "W’s Specials",
+                "images": [
+                  {
+                    "id": "51972e5f-f929-4d84-9f48-6a083a3aa2b5",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_signature/1767144200942-fv0owhx1d5.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "822f52cf-b8ec-4b13-9647-cbf2cbdaf941",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_signature/1767144200942-ofw0k1dol38.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "47799391-c753-4180-a1c7-f1f0304138a2",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_signature/1767144200943-ndk8ty4aens.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "1caaadc0-d2fc-4e8a-8a43-30f781758f21",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_signature/1767144200943-m3zefgc8hz9.jpg",
+                    "sortOrder": 3,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "257502a5-cbca-4ded-b2af-588700575ed9",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_signature/1767144200943-pz9lt4g6eqe.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "5763913a-a4d6-40f1-9c4b-25e276ca4c6e",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_signature/1767144200943-hyu3rp5mvga.jpg",
+                    "sortOrder": 5,
+                    "description": "",
+                    "isSelected": false
+                  }
+                ],
+                "description": "프라이빗풀에서 시작되는 여유로운 시간,\n하늘과 바다가 맞닿은 오션뷰 루프탑 수영장.\n오션뷰 스파와 테라스에서 즐기는 깊은 휴식과\n밤이 더해지는 바베큐 파티까지.\n\n머무는 하루가 특별해지는\nW만의 순간을 경험하세요."
+              }
+            }
+          ]
+        },
+        "directions": {
+          "sections": [
+            {
+              "hero": {
+                "title": "",
+                "images": [
+                  {
+                    "id": "dea3680c-0666-4d2a-baf8-a205814af06b",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/directions_hero/1767145909000-nnfgoojp2lk.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "ed6066e5-79d2-4a1b-9644-900593ea6528",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/directions_hero/1767145909000-7yzu5rmnxqo.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": false
+                  }
+                ]
+              },
+              "notice": {
+                "title": "",
+                "description": ""
+              }
+            }
+          ]
+        },
+        "main": {
+          "sections": [
+            {
+              "hero": {
+                "title": "당신의 가장 완벽한 하루, 더블유",
+                "images": [
+                  {
+                    "id": "97a59cbb-b392-430d-b1ea-777f3af1f02f",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/main_hero/1767145909000-u4j24k7e3bc.jpg",
+                    "sortOrder": 0,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "78167dc3-6e49-40a1-acda-ab178986b04c",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/main_hero/1767145909000-c01j5qlw3k6.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "f47f5a3a-d3e6-4775-9b7e-b2398f57780a",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/main_hero/1767145909000-u929s3g1i8.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "e7febe8f-53b0-465e-9f5c-32703858d3fc",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/main_hero/1767145909000-t9xhmgxgzb.jpg",
+                    "sortOrder": 3,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "cc4b10a7-5239-4bef-b528-8c19cadea782",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/main_hero/1767145909000-aif17ctn2n.jpg",
+                    "sortOrder": 4,
+                    "description": "",
+                    "isSelected": false
+                  },
+                  {
+                    "id": "82b643d0-e066-4af5-9510-f35fb134eaf5",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/main_hero/1767145909000-7639e1bfpb.jpg",
+                    "sortOrder": 5,
+                    "description": "",
+                    "isSelected": true
+                  }
+                ],
+                "description": "속초 등대해변 바로 앞,\n하늘과 수평선이 이어지는 풍경 속에서\n일상과는 다른 차원의 휴식이 시작됩니다.\n\n객실에서는 탁 트인 오션뷰와 함께\n프라이빗 풀과 스파가 조용한 여유를 완성하고,\n루프탑에서는 바다를 품은 수영장이\n머무는 시간을 한층 깊게 만듭니다.\n\n오션뷰 테라스, 맛있는 바베큐 파티,\n파도 소리에 스며드는 밤의 온기까지.\n모든 순간이 세심하게 설계된 공간입니다.\n\n바다와 품격이 공존하는 곳,\n속초 더블유 풀빌라입니다."
+              },
+              "about": []
+            }
+          ]
+        },
+        "room": [
+          {
+            "id": "fd5b63c1-66db-4ea8-a804-bdf97b2257ac",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "79423ca7-64f0-4ac5-9ca6-b3c2f29086f1",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "a5040ea4-40e1-4a46-9a2e-0531ecce7dc0",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "84cc179a-a311-4662-92af-391489c9899b",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "5d930913-b39a-4097-b813-a86cb7a43fb2",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "4c44586f-45fb-4f51-b886-15082f941da1",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "a2a8101f-93c1-430b-830f-dd56eee8261e",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "1827105d-be33-4d7d-bf3e-67f23c063fcb",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "9f8997ae-c2a2-4d60-b4b6-7db62fb96e04",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "gallery": {
+                  "title": "",
+                  "images": []
+                }
+              }
+            ]
+          }
+        ],
+        "facility": [
+          {
+            "id": "69e2885c-4500-4324-b9f3-9d212dd56673",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "about": {
+                  "title": "",
+                  "images": []
+                },
+                "experience": {
+                  "features": [],
+                  "additionalInfos": [],
+                  "benefits": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "733049e9-83d0-4569-8d42-8622a4adbd7b",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "about": {
+                  "title": "",
+                  "images": []
+                },
+                "experience": {
+                  "features": [],
+                  "additionalInfos": [],
+                  "benefits": []
+                }
+              }
+            ]
+          },
+          {
+            "id": "4b7041f4-03f5-452a-b5c2-e80487ab4db3",
+            "sections": [
+              {
+                "hero": {
+                  "title": "\n",
+                  "images": []
+                },
+                "about": {
+                  "title": "",
+                  "images": []
+                },
+                "experience": {
+                  "features": [],
+                  "additionalInfos": [],
+                  "benefits": []
+                }
+              }
+            ]
+          }
+        ],
+        "reservation": {
+          "sections": [
+            {
+              "hero": {
+                "title": "",
+                "images": []
+              },
+              "about": {
+                "title": "",
+                "images": [],
+                "description": ""
+              }
+            }
+          ]
+        }
+      },
+      "theme": {
+        "font": {
+          "koSub": {
+            "cdn": "https://fonts.cdnfonts.com/css/noto-serif-kr",
+            "key": "notoserifKR",
+            "woff2": null,
+            "family": "Noto Serif KR"
+          },
+          "enMain": {
+            "cdn": "https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap",
+            "key": "ooohbaby",
+            "woff2": null,
+            "family": "Oooh Baby"
+          },
+          "koMain": {
+            "cdn": "https://fonts.cdnfonts.com/css/noto-serif-kr",
+            "key": "notoserifKR",
+            "woff2": null,
+            "family": "Noto Serif KR"
+          }
+        },
+        "color": {
+          "primary": "#FCFCFC",
+          "secondary": "#577185"
+        }
+      }
+    },
+    "id": "5c3c5977-6247-4e43-a07f-c82001f9553f"
+  }
+}

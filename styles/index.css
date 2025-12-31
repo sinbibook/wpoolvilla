@@ -1,0 +1,1027 @@
+/* ================================
+   Fullpage Scroll Styles
+   ================================ */
+
+/* Fullpage Container */
+#fullpage {
+    position: relative;
+    width: 100%;
+    /* height removed to allow natural flow */
+}
+
+/* Fullpage Sections */
+.fp-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 스크롤 허용 - 푸터까지 보이도록 */
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* ================================
+   Section 1: Hero Section - Index Specific
+   ================================ */
+
+/* Index page specific hero bottom info position */
+.hero-bottom-info {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hero property name - 왼쪽 고정 */
+.hero-property-name {
+    flex: 0 0 auto;
+    font-family: var(--font-en-main), serif;
+    font-size: 1.125rem;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+/* Index page progress container - 중앙 위치 */
+.hero-progress-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.hero-section .section-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Animations for text on load */
+.hero-section .hero-title {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+.hero-section .hero-description {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+.hero-section .hero-bottom-info {
+    opacity: 0;
+    animation: fadeIn 1s ease 1s forwards;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    /* 모바일에서 일반 스크롤 강제 활성화 */
+    html, body {
+        overflow: auto !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        height: auto !important;
+        position: relative !important;
+    }
+
+    /* 모바일에서는 fp-nav 보정 제거 */
+    .hero-progress-container {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin-left: 0;
+        flex: 1;
+    }
+
+    .hero-property-name {
+        font-size: 1rem;
+    }
+
+    #fullpage {
+        height: auto !important;
+        overflow: visible !important;
+        position: relative !important;
+        transform: none !important;
+    }
+
+    .fp-section,
+    .section {
+        height: auto !important;
+        min-height: 100vh !important;
+        position: relative !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    /* Signature Section 모바일 조정 */
+    .signature-section {
+        min-height: 50vh !important;
+        height: auto !important;
+        padding: 80px 20px !important;
+    }
+
+    .signature-container {
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    .signature-left {
+        width: 100%;
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    .signature-content {
+        text-align: center;
+    }
+
+    .signature-section .signature-thumbnails {
+        display: none;
+    }
+
+    .signature-right {
+        display: none;
+    }
+
+    /* Navigation dots 완전히 숨기기 */
+    .fp-nav {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+    .hero-bottom-info {
+        left: 20px;
+        right: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .hero-property-name {
+        text-align: center;
+    }
+
+    .hero-progress-container {
+        padding: 0;
+    }
+
+    .hero-indicators {
+        justify-content: center;
+    }
+
+    .hero-content {
+        padding: 0 40px;
+    }
+
+    /* 모바일에서 히어로 섹션 텍스트만 즉시 표시 */
+    .hero-title,
+    .hero-description {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: fadeInUp 1s ease forwards !important;
+    }
+
+    /* 모바일에서 스크롤 애니메이션을 위한 초기 상태 */
+    .animate-element {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+
+    /* 모바일에서 애니메이션 활성화 상태 */
+    .animate-element.animate {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    /* 모바일 갤러리 스타일 수정 */
+    .gallery-section {
+        min-height: 100vh !important;
+        height: auto !important;
+        background: linear-gradient(to bottom, var(--color-secondary) 0%, var(--color-secondary) 50%, var(--color-primary) 50%, var(--color-primary) 100%) !important;
+    }
+
+    .gallery-container {
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 40px 0 !important;
+    }
+
+    .gallery-slider-wrapper {
+        height: 300px !important;
+        min-height: 300px !important;
+        overflow: visible !important;
+        transform: translateY(-50px) !important;
+    }
+
+    .gallery-slider {
+        height: 300px !important;
+        min-height: 300px !important;
+        padding: 0 20px !important;
+    }
+
+    .gallery-item {
+        width: 250px !important;
+        height: 280px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .gallery-header {
+        padding: 40px 20px !important;
+        text-align: center !important;
+    }
+}
+
+/* Navigation Dots */
+.fp-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.fp-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fp-nav li {
+    margin: 15px 0;
+}
+
+.fp-nav a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+}
+
+.fp-nav a span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.fp-nav a:hover span,
+.fp-nav a.active span {
+    background: #fff;
+    transform: scale(1.3);
+    border: 1px solid rgba(0,0,0,0.4);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeInUp 1s ease 2s forwards;
+}
+
+.scroll-indicator span {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+}
+
+.scroll-indicator::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 30px;
+    background: #666;
+    margin: 0 auto;
+    animation: scrollDown 1.5s ease infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+/* ================================
+   Section 2: Essence Section - Split Layout
+   ================================ */
+.essence-section {
+    background: #f5f5f5;
+    position: relative;
+    height: 100vh;
+}
+
+/* Property Name EN Styling */
+.property-name-en {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-en-main), serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: italic;
+    background: linear-gradient(to right, var(--color-primary) 0%, var(--color-primary) 50%, var(--color-secondary) 50%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    z-index: 10;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(99, 89, 85, 0.1);
+}
+
+.essence-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* 왼쪽: 이미지 영역 */
+.essence-left {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.essence-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 오른쪽: 텍스트 영역 */
+.essence-right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background: var(--color-primary);
+    overflow: hidden;
+}
+
+.essence-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/shadow1.png') no-repeat right top;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 0;
+    animation: floatingShadow 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes floatingShadow {
+    0%, 100% {
+        transform: rotate(0deg) scale(1) translate(0, 0);
+    }
+    20% {
+        transform: rotate(-1deg) scale(1.02) translate(2px, -3px);
+    }
+    40% {
+        transform: rotate(1deg) scale(1.01) translate(-3px, 2px);
+    }
+    60% {
+        transform: rotate(-0.5deg) scale(1.03) translate(4px, -2px);
+    }
+    80% {
+        transform: rotate(0.5deg) scale(1.01) translate(-2px, 3px);
+    }
+}
+
+.essence-content {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.essence-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+.essence-divider {
+    width: 1px;
+    height: 60px;
+    background: #333;
+    margin: 0 auto 30px auto;
+}
+
+.essence-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+}
+
+/* ================================
+   Section 3: Signature Section (Like Essence Section)
+   ================================ */
+.signature-section {
+    background: var(--color-primary);
+    position: relative;
+    height: 100vh;
+}
+
+.signature-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* 왼쪽: 텍스트 영역 */
+.signature-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.signature-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/shadow2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    pointer-events: none;
+    animation: leafFloat 15s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+@keyframes leafFloat {
+    0%, 100% {
+        transform: rotate(0deg) scale(1) translate(0, 0);
+    }
+    15% {
+        transform: rotate(2deg) scale(1.02) translate(3px, -5px);
+    }
+    30% {
+        transform: rotate(-1deg) scale(1.01) translate(-2px, 2px);
+    }
+    45% {
+        transform: rotate(1.5deg) scale(1.03) translate(5px, -3px);
+    }
+    60% {
+        transform: rotate(-2deg) scale(1.01) translate(-4px, 4px);
+    }
+    75% {
+        transform: rotate(0.5deg) scale(1.02) translate(2px, -6px);
+    }
+    85% {
+        transform: rotate(-1.5deg) scale(1.01) translate(-3px, 3px);
+    }
+}
+
+.signature-content {
+    max-width: 500px;
+}
+
+.signature-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.signature-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Signature Thumbnails */
+.signature-thumbnails {
+    display: flex;
+    gap: 25px;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.signature-thumb {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hexagon border (only visible when active or hover) */
+.signature-thumb::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+/* White padding inner layer */
+.signature-thumb::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: var(--color-primary);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: 2;
+}
+
+.signature-thumb img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.3s ease;
+    z-index: 3;
+}
+
+.signature-thumb:hover img {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Active state - show border */
+.signature-thumb.active::before {
+    background: var(--color-secondary);
+}
+
+/* Hover state - show semi-transparent border */
+.signature-thumb:hover:not(.active)::before {
+    background: rgba(99, 89, 85, 0.3);
+}
+
+/* 오른쪽: 이미지 영역 */
+.signature-right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.signature-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+/* ================================
+   Section 4: Gallery Section
+   ================================ */
+/* Gallery styles are now in common.css */
+
+/* ================================
+   Section 5: Closing Section
+   ================================ */
+.closing-section {
+    position: relative;
+    height: 100vh; /* Full viewport height for last fullpage section */
+}
+
+.closing-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.closing-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 배경 위 그라데이션 오버레이 */
+.closing-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.closing-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    color: #fff;
+}
+
+/* 중앙 콘텐츠 컨테이너 */
+.closing-center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    z-index: 2;
+}
+
+/* 타이틀 */
+.closing-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.closing-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+/* 설명 */
+.closing-description {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.closing-description.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+
+/* Closing Section CTA Buttons */
+.closing-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.closing-cta-buttons.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+}
+
+
+.closing-btn {
+    padding: 12px 32px;
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    border-radius: 0;
+    color: var(--color-primary);
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.closing-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.closing-btn:hover {
+    color: #333;
+}
+
+.closing-btn:hover::before {
+    left: 0;
+}
+
+.closing-btn span {
+    display: inline-block;
+}
+
+
+/* ================================
+   Responsive Styles
+   ================================ */
+@media (max-width: 1200px) {
+    /* Signature section responsive */
+}
+
+@media (max-width: 768px) {
+    /* Hide desktop navigation */
+    .fp-nav {
+        display: none !important;
+    }
+
+
+    /* Disable fullpage scroll on mobile */
+    #fullpage {
+        overflow: visible !important;
+    }
+
+    .section {
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    .fp-nav a {
+        width: 10px;
+        height: 10px;
+    }
+
+    .fp-nav a span {
+        width: 10px;
+        height: 10px;
+    }
+
+    .section-wrapper {
+        padding: 60px 20px;
+    }
+
+    /* Essence section mobile */
+    .essence-container {
+        flex-direction: column-reverse;
+    }
+
+    .essence-left,
+    .essence-right {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .essence-right {
+        padding: 40px 20px;
+    }
+
+    /* Signature section mobile */
+    .signature-container {
+        flex-direction: column;
+    }
+
+    .signature-left,
+    .signature-right {
+        width: 100%;
+        height: 50vh;
+        padding: 0;
+    }
+
+    .signature-left {
+        padding: 40px 20px;
+    }
+
+    .essence-title {
+        font-size: 1.5rem;
+    }
+
+    .essence-description {
+        font-size: 0.9rem;
+    }
+
+    .gallery-container,
+    .closing-content {
+        padding: 0 20px;
+    }
+
+    .signature-title,
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    .closing-title {
+        font-size: 2rem;
+    }
+
+    .closing-description {
+        font-size: 1.25rem;
+    }
+
+    .closing-title {
+        top: 60px;
+        left: 20px;
+        font-size: 1.5rem;
+    }
+
+    .closing-description {
+        bottom: 60px;
+        left: 20px;
+        font-size: 1rem;
+    }
+
+    .closing-cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 20px;
+    }
+
+    .closing-btn {
+        width: 100%;
+        padding: 14px 24px;
+    }
+
+    .gallery-slider {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .essence-title {
+        font-size: 1.25rem;
+    }
+
+    .essence-divider {
+        height: 40px;
+    }
+
+    .essence-description {
+        font-size: 0.875rem;
+    }
+
+    .signature-section {
+        padding: 3rem 0 0 0 !important;
+    }
+
+    .signature-title,
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .signature-description,
+    .gallery-description {
+        font-size: 1rem;
+    }
+
+
+    .closing-title {
+        font-size: 1.5rem;
+    }
+
+    .closing-description {
+        font-size: 1rem;
+    }
+}
+
+/* ================================
+   Scroll Animations for FullPage
+   ================================ */
+.animate-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.animate-element.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Stagger animations within the same section */
+.essence-title.animate-element {
+    transition-delay: 0.1s;
+}
+
+.essence-divider.animate-element {
+    transition-delay: 0.3s;
+}
+
+.essence-description.animate-element {
+    transition-delay: 0.5s;
+}
+
+.signature-title.animate-element {
+    transition-delay: 0.1s;
+}
+
+.signature-description.animate-element {
+    transition-delay: 0.3s;
+}
+
+.signature-thumbnails.animate-element {
+    transition-delay: 0.5s;
+}
+
+.signature-thumb.animate-element:nth-child(1) {
+    transition-delay: 0.6s;
+}
+
+.signature-thumb.animate-element:nth-child(2) {
+    transition-delay: 0.7s;
+}
+
+.signature-thumb.animate-element:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.gallery-title.animate-element {
+    transition-delay: 0.1s;
+}
+
+.gallery-description.animate-element {
+    transition-delay: 0.3s;
+}
+

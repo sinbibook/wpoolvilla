@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="숙소 설명">
+    <meta name="keywords" content="SEO 키워드">
+    <title id="page-title">시설 안내 - 숙소명</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/common.css" as="style">
+    <link rel="preload" href="styles/facility.css" as="style">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/facility.css">
+
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="속초 더블유 풀빌라 스파펜션 - 시설안내" />
+  
+  <meta property="og:image" content="https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-egpcuwxyhpp.jpg" />
+  <meta property="og:url" content="https://wpoolvilla.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="속초 더블유 풀빌라 스파펜션 - 시설안내" />
+  
+  <meta name="twitter:image" content="https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-egpcuwxyhpp.jpg" />
+</head>
+<body>
+    <main class="main-content">
+        <!-- CUSTOM FIELD : 메인 소개 섹션 -->
+        <section class="hero-section hero-center-bottom">
+            <div class="hero-slider" data-hero-slider>
+                <!-- 시설 이미지 동적 매핑 -->
+            </div>
+            <!-- 페이지명 하드코딩 -->
+            <div class="hero-property-title">SPECIAL</div>
+            <div class="hero-bottom-info">
+                <div class="hero-progress-container">
+                    <button class="hero-nav-prev" aria-label="Previous slide">&lt;</button>
+                    <span class="current-slide hero-indicators" data-current-slide>01</span>
+                    <div class="hero-progress-bar">
+                        <div class="hero-progress-fill" data-hero-progress></div>
+                    </div>
+                    <span class="total-slides hero-indicators" data-total-slides>01</span>
+                    <button class="hero-nav-next" aria-label="Next slide">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="facility-main-section">
+            <div class="facility-main-content">
+                <!-- 시설 썸네일 이미지 매핑 -->
+                <div class="facility-thumbnail animate-element" data-facility-thumbnail>
+                    <div class="facility-thumbnail-hexagon">
+                        <img src="" alt="Facility Thumbnail">
+                    </div>
+                </div>
+
+                <!-- 시설 메인 소개 타이틀 매핑 -->
+                <h2 class="facility-main-title animate-element" data-facility-title></h2>
+                <!-- 시설 메인 소개 설명 매핑 -->
+                <p class="facility-main-description animate-element" data-facility-description></p>
+
+                <!-- Facility Label - 동적 생성시 숫자 변경 -->
+                <div class="facility-label animate-element">
+                    <span>#SPECIAL <span data-facility-number></span></span>
+                </div>
+
+                <!-- 시설 메인 이미지 매핑 -->
+                <div class="facility-full-image animate-element" data-facility-main-image>
+                    <img src="" alt="Main Facility">
+                </div>
+            </div>
+        </section>
+        <section class="facility-details-wrapper">
+            <div class="facility-details-content">
+                <div class="facility-details-section animate-element">
+                    <h3 class="facility-detail-title">시설 상세 안내</h3>
+                    <!-- CUSTOM FIELD 시설설명 동적 매핑 -->
+                    <div class="facility-detail-content" data-facility-detail-description>
+                        <!-- 동적으로 내용이 매핑됩니다 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOM FIELD : 이용안내 섹션 없으면 display none -->
+        <section class="facility-additional-wrapper">
+            <div class="facility-additional-content">
+                <div class="facility-additional-section animate-element">
+
+                    <div class="facility-info-grid">
+                        <!-- 주요특징 매핑 -->
+                        <div class="facility-info-card animate-element">
+                            <h3 class="facility-card-title">주요특징</h3>
+                            <div class="facility-card-content" data-facility-features>
+                                <!-- 동적으로 내용이 매핑됩니다 -->
+                            </div>
+                        </div>
+
+                        <!-- 추가정보 매핑 -->
+                        <div class="facility-info-card animate-element">
+                            <h3 class="facility-card-title">추가정보</h3>
+                            <div class="facility-card-content" data-facility-additional-info>
+                                <!-- 동적으로 내용이 매핑됩니다 -->
+                            </div>
+                        </div>
+
+                        <!-- 이용혜택 매핑 -->
+                        <div class="facility-info-card animate-element">
+                            <h3 class="facility-card-title">이용혜택</h3>
+                            <div class="facility-card-content" data-facility-benefits>
+                                <!-- 동적으로 내용이 매핑됩니다 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 부대시설 갤러리 영역 -->
+        <section class="facility-gallery-section">
+            <div class="facility-gallery-label animate-element">
+                <!-- 하드코딩 -->
+                <span>#GALLERY</span>
+            </div>
+            <!-- 부대시설 이미지 4개 동적 매핑 -->
+            <div class="facility-gallery-container" data-facility-gallery>
+                <!-- 동적으로 gallery-item이 생성됩니다 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- property.nameEn 매핑 (uppercase, 5개 span 반복) -->
+    <div class="marquee-section">
+        <div class="marquee-container">
+            <div class="marquee-text" data-marquee-property-name>
+                <!-- 동적으로 span이 생성됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Include ImageWithFallback script (standard-template-data.json에서만 필요) -->
+    <!-- <script src="js/image-with-fallback.js"></script> -->
+
+    <!-- Image Helpers (매핑 시 주석 해제 필요) -->
+    <script src="js/image-helpers.js"></script>
+
+    <!-- Base Data Mapper -->
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+
+    <!-- Facility Page Mapper -->
+    <script src="js/data-mapper/pages/facility-mapper.js"></script>
+
+    <!-- Preview Handler for Admin Integration -->
+    <script src="js/preview-handler.js"></script>
+
+    <!-- Header Footer Mapper -->
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+
+    <!-- Header and Footer Loader -->
+    <script src="js/header-footer-loader.js"></script>
+
+    <!-- Page-specific script -->
+    <script src="js/pages/facility.js"></script>
+
+    <!-- Scroll Animations -->
+    <script src="js/scroll-animations.js"></script>
+
+</body>
+</html>

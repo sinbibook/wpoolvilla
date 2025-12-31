@@ -1,0 +1,1313 @@
+/* ================================
+   Common Styles
+   ================================ */
+
+/* Font Face 정의는 각 HTML 페이지의 head에 CDN으로 정의됨 */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-ko-main), 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+                 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+                 'Malgun Gothic', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--color-primary);
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================================
+   Hero Section - Full Banner Slider
+   ================================ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Hero Slider Container */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 3s ease-out;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.5));
+    z-index: 2;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 40px; /* 좌우 동일한 패딩으로 중앙 정렬 */
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    letter-spacing: 0.02em;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    opacity: 0.9;
+}
+
+/* Hero Bottom Info - Base styles */
+.hero-bottom-info {
+    position: absolute;
+    bottom: 40px;
+    z-index: 100;
+}
+
+.hero-property-name {
+    color: #fff;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    font-weight: 500;
+    flex: 0 0 auto;
+}
+
+/* Hero Property Title - Page name above progress bar (for pages with center layout) */
+.hero-property-title {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-en-main), serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.08em;
+    text-align: center;
+    z-index: 10;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Progress Bar */
+.hero-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Navigation arrows for hero slider */
+.hero-nav-prev,
+.hero-nav-next {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 5px 10px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.hero-nav-prev:hover,
+.hero-nav-next:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Center aligned hero bottom for pages with page title */
+.hero-center-bottom .hero-bottom-info {
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    justify-content: center;
+}
+
+.hero-center-bottom .hero-property-name {
+    display: none;
+}
+
+.hero-progress-bar {
+    width: 300px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.hero-progress-fill {
+    height: 100%;
+    background: #fff; /* 완전 흰색 */
+    width: 0;
+    /* transition은 JavaScript에서 동적으로 설정됨 */
+    transform-origin: left;
+}
+
+/* Slide Indicators */
+.hero-indicators {
+    color: #fff;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.current-slide,
+.total-slides {
+    font-weight: 500;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #333;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #555;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.btn-secondary:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* ================================
+   Animations
+   ================================ */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInScale 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ================================
+   Footer
+   ================================ */
+.footer {
+    position: relative;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 0 30px;
+    margin-top: 0;
+    z-index: 100;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-info {
+    margin-bottom: 40px;
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-contact {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-business {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.business-info {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.business-info span {
+    margin: 0 10px;
+}
+
+.business-info span:not(:last-child)::after {
+    content: '|';
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom {
+    padding-top: 20px;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .hero-left,
+    .hero-right {
+        max-width: 100%;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* 모바일에서 fp-nav 보정 제거 */
+    .hero-content {
+        margin-left: 0;
+    }
+
+    .hero-title-property-name {
+        font-size: 2rem;
+    }
+
+    .hero-slider-container {
+        aspect-ratio: 4/3;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    /* Hero Property Title - Mobile adjustments */
+    .hero-property-title {
+        bottom: 80px;
+        font-size: 2.5rem;
+    }
+
+    /* Hero Bottom Info - Mobile adjustments for facility/room pages */
+    .hero-center-bottom .hero-bottom-info {
+        bottom: 30px;
+    }
+
+    .hero-progress-container {
+        gap: 10px;
+    }
+
+    .hero-progress-bar {
+        width: 200px;
+    }
+
+    .hero-nav-prev,
+    .hero-nav-next {
+        font-size: 1rem;
+        padding: 3px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 30px 15px;
+    }
+
+    .hero-title-property-name {
+        font-size: 1.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    /* Hero Property Title - Small mobile */
+    .hero-property-title {
+        bottom: 70px;
+        font-size: 2rem;
+    }
+
+    /* Hero Bottom Info - Small mobile */
+    .hero-center-bottom .hero-bottom-info {
+        bottom: 20px;
+    }
+
+    .hero-progress-bar {
+        width: 150px;
+    }
+
+    .hero-indicators {
+        font-size: 0.75rem;
+    }
+}
+
+/* ================================
+   Gallery Section (Common)
+   ================================ */
+.gallery-section {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--color-secondary) 50%, var(--color-primary) 50%);
+}
+
+.gallery-section .section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.gallery-section .section-wrapper {
+    position: relative;
+    height: 100vh;
+    z-index: 2;
+}
+
+.gallery-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-header {
+    padding: 40px 60px 60px 60px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.gallery-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+.gallery-description {
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gallery Slider */
+.gallery-slider-wrapper {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.gallery-slider {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    padding: 0 60px;
+    gap: 30px;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: max-content;
+}
+
+.gallery-item {
+    position: relative;
+    flex: 0 0 auto;
+    width: 350px;
+    height: 400px;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: 40px;
+}
+
+/* Alternating layout: vertical (portrait) - 사이즈 조정 */
+.gallery-item:nth-child(odd) {
+    width: 300px;
+    height: 400px;
+}
+
+/* Alternating layout: horizontal (landscape) - 사이즈 조정 */
+.gallery-item:nth-child(even) {
+    width: 400px;
+    height: 300px;
+}
+
+.gallery-item-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+
+/* Description outside image */
+.gallery-item-description {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    background: transparent;
+}
+
+.gallery-item-description span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.02em;
+}
+
+.gallery-item-description span::before {
+    content: '# ';
+    color: #fff;
+}
+
+.gallery-item-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.gallery-item-title::before {
+    content: '# ';
+    color: #fff;
+}
+
+/* Gallery Media Queries */
+@media (max-width: 768px) {
+    .gallery-header {
+        padding: 40px 20px 30px 20px;
+    }
+
+    .gallery-slider {
+        padding: 0 20px;
+    }
+
+    .gallery-item:nth-child(odd) {
+        width: 40vh;
+        height: 55vh;
+    }
+
+    .gallery-item:nth-child(even) {
+        width: 55vh;
+        height: 40vh;
+    }
+
+    .gallery-item-description {
+        top: -25px;
+        left: 0;
+        padding: 0;
+    }
+
+    .gallery-item-description span {
+        font-size: 0.75rem;
+    }
+}
+
+/* ================================
+   Floating Booking Buttons
+   ================================ */
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 10px;
+    z-index: 999;
+}
+
+.floating-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* When page is scrolled */
+body.scrolled .floating-btn {
+    background: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.floating-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+/* Before background color changes when scrolled */
+body.scrolled .floating-btn::before {
+    background: var(--color-primary);
+}
+
+.floating-btn:hover::before {
+    width: 100%;
+}
+
+.floating-btn:hover {
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effect when scrolled */
+body.scrolled .floating-btn:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(99, 89, 85, 0.2);
+}
+
+/* Dark sections (Gallery & Closing) - Light button styles */
+body.dark-section-active:not(.scrolled) .floating-btn {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+body.dark-section-active:not(.scrolled) .floating-btn::before {
+    background: var(--color-primary) !important;
+}
+
+body.dark-section-active:not(.scrolled) .floating-btn:hover {
+    color: var(--color-secondary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* Dark sections with scroll - maintain light color (but not in footer) */
+body.dark-section-active.scrolled:not(.footer-visible) .floating-btn {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+body.dark-section-active.scrolled:not(.footer-visible) .floating-btn::before {
+    background: var(--color-primary) !important;
+}
+
+body.dark-section-active.scrolled:not(.footer-visible) .floating-btn:hover {
+    color: var(--color-secondary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* Footer area - primary color buttons */
+body.footer-visible .floating-btn {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+body.footer-visible .floating-btn::before {
+    background: var(--color-primary) !important;
+}
+
+body.footer-visible .floating-btn:hover {
+    color: var(--color-secondary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.floating-btn .booking-icon {
+    display: none;
+}
+
+.floating-btn .booking-calendar-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ================================
+   Scroll to Top Button
+   ================================ */
+.scroll-to-top {
+    position: fixed !important;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: var(--font-ko-main), sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.scroll-to-top:hover::before {
+    width: 100%;
+}
+
+.scroll-to-top:hover {
+    color: #000;
+    border-color: #fff;
+}
+
+/* When page is scrolled */
+body.scrolled .scroll-to-top {
+    background: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+body.scrolled .scroll-to-top::before {
+    background: var(--color-primary);
+}
+
+body.scrolled .scroll-to-top:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+/* Dark sections - Light scroll button */
+body.dark-section-active:not(.scrolled) .scroll-to-top {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+body.dark-section-active:not(.scrolled) .scroll-to-top::before {
+    background: var(--color-primary);
+}
+
+body.dark-section-active:not(.scrolled) .scroll-to-top:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+/* Dark sections with scroll */
+body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top::before {
+    background: var(--color-primary);
+}
+
+body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+/* ================================
+   Marquee Section
+   ================================ */
+.marquee-section {
+    width: 100%;
+    overflow: hidden;
+    background: var(--color-primary);
+    padding: 200px 0 0 0;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 60s linear infinite;
+    font-family: var(--font-en-main), serif;
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--color-secondary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.marquee-text span {
+    padding-right: 100px;
+    display: inline-block;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.marquee-animated {
+    animation-play-state: running;
+}
+
+/* Mobile Responsive for Marquee */
+@media (max-width: 768px) {
+    .marquee-section {
+        padding: 100px 0 60px 0;
+    }
+
+    .marquee-text {
+        font-size: 2.5rem;
+    }
+
+    .marquee-text span {
+        padding-right: 60px;
+    }
+}
+
+/* Mobile Responsive for Floating Buttons */
+@media (max-width: 768px) {
+    .floating-buttons {
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        justify-content: flex-end;
+    }
+
+    .floating-btn {
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        border-radius: 0;
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 예약하기 버튼 - 달력 아이콘만 표시 */
+    .booking-btn span {
+        display: none;
+    }
+
+    .booking-btn .booking-calendar-icon {
+        display: block !important;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* YBS 버튼 - Y만 표시 */
+    .ybs-btn span {
+        display: none;
+    }
+
+    .ybs-btn .booking-icon {
+        display: none;
+    }
+
+    .ybs-btn::after {
+        content: 'Y';
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 0.7rem;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    body.scrolled .scroll-to-top {
+        background: var(--color-secondary) !important;
+        border-color: var(--color-primary) !important;
+        color: var(--color-primary) !important;
+    }
+}
+
+/* ================================
+   Full Banner Section
+   ================================ */
+.full-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    overflow: visible;
+}
+
+.full-banner-title {
+    position: absolute;
+    left: 10%;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--font-en-main), serif;
+    letter-spacing: 0.05em;
+    font-style: italic;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1.2s ease;
+}
+
+.full-banner-title.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.full-banner-circle {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 5px solid var(--color-secondary);
+    padding: 12px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-clip: padding-box;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.full-banner-circle.animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .full-banner {
+        height: 400px;
+        padding: 0 5%;
+    }
+
+    .full-banner-title {
+        font-size: 2rem;
+        left: 5%;
+    }
+
+    .full-banner-circle {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .full-banner {
+        height: 150px;
+    }
+
+    .full-banner-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .full-banner-circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Facility Gallery Section - moved from facility.css */
+.facility-gallery-section {
+    background: var(--color-secondary);
+    min-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+/* Facility Gallery Label */
+.facility-gallery-label {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+    z-index: 3;
+}
+
+.facility-gallery-label.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.facility-gallery-label span {
+    font-family: var(--font-en-main), serif;
+    font-size: 4rem;
+    font-style: italic;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    position: relative;
+    display: inline-block;
+}
+
+.facility-gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1600px;  /* room과 동일하게 컨테이너 너비 증가 */
+    padding: 0 20px;
+}
+
+/* Facility Gallery Item Override - room과 동일한 스타일 */
+.facility-gallery-container .gallery-item {
+    width: 450px;  /* room과 동일한 크기 */
+    height: 450px;  /* 정사각형 */
+    max-width: none;
+    flex: 0 0 auto;
+}
+
+.facility-gallery-container .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item {
+    flex: 1;
+    max-width: 320px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.gallery-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.gallery-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.gallery-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.gallery-item:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.gallery-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: none;
+}
+
+
+.gallery-item-title {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Gallery Mobile Responsive */
+@media (max-width: 768px) {
+    .facility-gallery-label {
+        left: 20px;
+        top: 40px;
+    }
+
+    .facility-gallery-label span {
+        font-size: 2.5rem;
+    }
+
+    .facility-gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        bottom: auto;
+        position: relative;
+        transform: none;
+        left: auto;
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+
+    .gallery-item {
+        max-width: calc(50% - 10px);
+        width: calc(50% - 10px);
+    }
+
+    .gallery-item img {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .facility-gallery-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .gallery-item {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+}
