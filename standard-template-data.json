@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.7.0",
-    "generatedAt": "2026-01-02T05:18:32.411Z",
+    "version": "1.8.0",
+    "generatedAt": "2026-01-05T03:11:34.745Z",
     "templateType": "fullpage_scroll",
     "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
     "homepageId": "5c3c5977-6247-4e43-a07f-c82001f9553f"
@@ -35,10 +35,10 @@
       "펜션"
     ],
     "businessInfo": {
-      "businessName": "지세",
-      "businessNumber": "110-23-92280",
-      "representativeName": "유정희",
-      "businessAddress": "강원특별자치도 속초시 영랑해안길 181 (영랑동)",
+      "businessName": "더블유에이",
+      "businessNumber": "122-45-96734",
+      "representativeName": "박문주",
+      "businessAddress": "강원특별자치도 속초시 영랑해안길 183 (영랑동)",
       "businessPhone": "",
       "businessEmail": "",
       "businessType": "",
