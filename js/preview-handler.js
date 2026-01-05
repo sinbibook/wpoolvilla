@@ -145,6 +145,9 @@ class PreviewHandler {
             case 'THEME_UPDATE':
                 this.handleThemeUpdate(data);
                 break;
+            case 'POPUP_UPDATE':
+                this.handlePopupUpdate(data);
+                break;
             default:
                 break;
         }
@@ -218,6 +221,12 @@ class PreviewHandler {
 
         // 전체 페이지 다시 렌더링 (완료 대기)
         await this.renderTemplate(this.currentData);
+
+        // 팝업 데이터가 있으면 팝업도 업데이트
+        const popupData = data?.homepage?.customFields?.popup;
+        if (popupData && window.popupManager) {
+            window.popupManager.updateFromTemplateData(data);
+        }
 
         // 부모 창에 업데이트 완료 신호
         this.notifyRenderComplete('UPDATE_COMPLETE');
@@ -346,6 +355,22 @@ class PreviewHandler {
         if (!data) return;
         this.applyThemeVariables(data);
         this.notifyRenderComplete('THEME_UPDATE_COMPLETE');
+    }
+
+    /**
+     * 팝업 업데이트 처리
+     */
+    handlePopupUpdate(data) {
+        if (window.popupManager) {
+            window.popupManager.updateFromPreview(data);
+        } else if (window.PopupManager) {
+            window.popupManager = new PopupManager();
+            window.popupManager.init().then(() => {
+                window.popupManager.updateFromPreview(data);
+            });
+        }
+
+        this.notifyRenderComplete('POPUP_UPDATE_COMPLETE');
     }
 
     /**
