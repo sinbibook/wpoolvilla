@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.2 // 요소가 20% 보일 때 애니메이션 시작
+        threshold: 0.1 // 요소가 10% 보일 때 애니메이션 시작
     };
 
     // Observer 콜백 함수
@@ -55,7 +55,19 @@ document.addEventListener('DOMContentLoaded', function() {
     animateElements.forEach(selector => {
         const elements = document.querySelectorAll(selector);
         elements.forEach(element => {
-            observer.observe(element);
+            // 요소가 이미 뷰포트에 있는지 확인
+            const rect = element.getBoundingClientRect();
+            const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+
+            if (isInViewport) {
+                // 이미 뷰포트에 있으면 바로 애니메이션 시작
+                setTimeout(() => {
+                    element.classList.add('animate');
+                }, 100);
+            } else {
+                // 그렇지 않으면 관찰 시작
+                observer.observe(element);
+            }
         });
     });
 

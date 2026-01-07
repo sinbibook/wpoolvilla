@@ -179,6 +179,66 @@ class MainMapper extends BaseDataMapper {
                 const blockElement = this.createIntroBlock(block);
                 introContainer.appendChild(blockElement);
             });
+
+        // 동적으로 생성된 요소들에 애니메이션 초기화
+        this.initializeIntroAnimations();
+    }
+
+    /**
+     * 동적으로 생성된 intro 요소들에 애니메이션 적용
+     */
+    initializeIntroAnimations() {
+        // IntersectionObserver 설정
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        // Observer 콜백
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        // Observer 생성
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // intro-block 내부 요소들 선택하여 관찰
+        const elements = document.querySelectorAll('.intro-block-image, .intro-block-content');
+        elements.forEach(element => {
+            // 이미 뷰포트에 있는지 확인
+            const rect = element.getBoundingClientRect();
+            const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+
+            if (isInViewport) {
+                // 이미 뷰포트에 있으면 바로 애니메이션
+                setTimeout(() => {
+                    element.classList.add('animate');
+                }, 100);
+            } else {
+                // 그렇지 않으면 관찰 시작
+                observer.observe(element);
+            }
+        });
+
+        // 순차적 애니메이션을 위한 딜레이 설정
+        const introBlocks = document.querySelectorAll('.intro-block');
+        introBlocks.forEach((block, index) => {
+            const image = block.querySelector('.intro-block-image');
+            const content = block.querySelector('.intro-block-content');
+
+            if (image) {
+                image.style.transitionDelay = `${index * 0.1}s`;
+            }
+            if (content) {
+                content.style.transitionDelay = `${index * 0.1 + 0.2}s`;
+            }
+        });
     }
 
     /**
