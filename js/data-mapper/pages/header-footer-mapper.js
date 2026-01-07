@@ -122,6 +122,14 @@ class HeaderFooterMapper extends BaseDataMapper {
                     window.open(bookingUrl, '_blank');
                 };
             });
+
+            // data-property-realtime-booking-id를 가진 버튼들에도 클릭 이벤트 설정
+            const realtimeBookingButtons = document.querySelectorAll('[data-property-realtime-booking-id]');
+            realtimeBookingButtons.forEach(button => {
+                button.onclick = () => {
+                    window.open(bookingUrl, '_blank');
+                };
+            });
         }
 
         // ybsId 찾기
