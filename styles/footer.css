@@ -41,8 +41,8 @@
 
 .footer-menu-groups {
     display: flex;
-    gap: 50px;
-    flex: 1;
+    gap: 35px;
+    flex: 2;
 }
 
 .footer-menu-group {
