@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.14.0",
-    "generatedAt": "2026-01-12T07:34:59.787Z",
+    "version": "1.15.0",
+    "generatedAt": "2026-02-05T01:59:59.428Z",
     "templateType": "fullpage_scroll",
     "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
     "homepageId": "5c3c5977-6247-4e43-a07f-c82001f9553f"
@@ -16,8 +16,8 @@
     "longitude": 128.594590827437,
     "contactPhone": "",
     "contactEmail": "",
-    "checkin": "15:00:00",
-    "checkout": "11:00:00",
+    "checkin": "15:00",
+    "checkout": "11:00",
     "checkInOutInfo": "[펜션 안내 사항]\n1. 전객실 호텔식 침구류 제공\n2. A동 반려견 동반 불가 \n3. 객실 내 육류, 튀김류, 생선류 조리 금지 , 개인 취사도구 반입 금지입니다\n4. 펜션의 객실요금은 각 객실의 기준인원이 이용할 수 있는 요금으로 기준인원이 넘어가는 추가인원에 대한 비용은 별도 지불하셔야 합니다.\n5. 예약 인원에서 인원이 추가되는 경우 펜션에 미리 연락을 주시기 바랍니다.\n6. 전객실 금연입니다.",
     "usageGuide": "[입/퇴실 안내]\n - 입실시각: 15시\n - 퇴실시각: 11시\n ※ 22시 이후 입실 시 펜션에 사전 문의 부탁드립니다.\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.\n\n[실내 개별바베큐]\n- 객실 내 전기그릴 사용\n- 이용 금액 : 20,000원 (현장결제)\n- 육류만 가능 / 해산물은 불가\n* 개인 전기그릴 반입 및 사용은 불가합니다. \n* 사용 후 객실 밖에 주시면 수거합니다.\n\n[실내풀빌라]\n- 개별실내풀빌라 객실 : A601\n- 이용 시간 : 입실 후 ~ 22시까지\n- 미온수 비용 : 7만원(현장결제)\n- 미온수는 입실 전 날까지 사전 예약해주세요\n- 온도 : 7~8월 30도 / 이외 34도 \n* 2층 실외 풀빌라 객실은 7~8월만 운영\n\n[실외 풀빌라]\n* 2층 실외 풀빌라 객실은 7~8월만 운영(찬물)\n- 실외풀빌라 객실 : A201,A202\n- 이용 시간 : 입실 후 ~ 22시까지 \n- 찬물만 가능 / 무료\n\n[루프탑 실외 수영장]\n- 비용: 무료\n- 운영기간: 하절기 운영 (26년 7~8월 예정)\n- 이용복장: 수영복\n\n[스파]\n- 전 객실 오션뷰 스파가능\n- 무료 이용 가능\n- 입욕제는 사용 불가합니다.\n\n[서비스]\n- 전 객실 와이파이 가능\n- 넷플릭스, 유튜브 시청 가능 (개인계정 사용)\n\n[어메니티]\n- 호텔식 침구 제공\n- 객실 내 어메니티 비치 (칫솔, 치약, 비누, 샤워타올 등)",
     "reservationGuide": "미성년자는 보호자 없이 예약 및 입실 불가하며, 위반 시 환불 없이 퇴실됩니다.\n객실 요금은 기준 인원 기준이며, 초과 시 추가 요금이 발생합니다.\n최대 인원 초과 시 입실 불가하며, 이로 인한 환불은 불가입니다. (유아, 어린이 포함)\n현장 추가 요금은 숙소 측에 사전 확인 바랍니다.\n수영장 등 부대시설은 날씨나 상황에 따라 이용이 제한될 수 있으니 사전 확인 바랍니다.\n당일 예약 후 취소 시 환불 불가하며, 늦은 시간 당일 예약 후 즉시 방문 시 입실 불가할 수 있으니 숙소 확인 후 예약해 주세요.\n취소 수수료는 구매처마다 다를 수 있습니다.\n시스템 오류로 인해 정상가와 다른 금액으로 예약이 진행된 경우, 부득이하게 예약이 취소될 수 있습니다.\n전 객실 금연이며, 흡연은 지정된 장소에서만 가능합니다.",
@@ -39,10 +39,10 @@
       "businessNumber": "122-45-96734",
       "representativeName": "박문주",
       "businessAddress": "강원특별자치도 속초시 영랑해안길 183 (영랑동)",
-      "businessPhone": "",
-      "businessEmail": "",
-      "businessType": "",
-      "businessCategory": "",
+      "businessPhone": "010-8789-9603",
+      "businessEmail": "546@naver.com",
+      "businessType": "individual",
+      "businessCategory": "숙박업",
       "eCommerceRegistrationNumber": ""
     },
     "contractInfo": {
@@ -69,36 +69,42 @@
         "displayOrder": 0,
         "images": [
           {
+            "id": "e029217f-c555-4985-b07c-15813cdaab2f",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767083581328-5hmre1gmqy.jpg",
             "sortOrder": 0,
             "description": "개별 수영장",
             "isSelected": true
           },
           {
+            "id": "54a41cd4-f995-4d57-ae00-f854b5790ab5",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083369-t4b80np9ovr.jpg",
             "sortOrder": 2,
             "description": "개별 수영장",
             "isSelected": true
           },
           {
+            "id": "ff537a11-b7fc-4aa5-b2e8-11353d977c86",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083369-npbb8wvu9.jpg",
             "sortOrder": 0,
             "description": "개별 수영장",
             "isSelected": true
           },
           {
+            "id": "366eff6b-4dbc-457c-9727-1d6b2b25e81d",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083369-8j78h3slp8.jpg",
             "sortOrder": 1,
             "description": "개별 수영장",
             "isSelected": true
           },
           {
+            "id": "9ca3fc54-062c-4c8e-b20a-b239750f7659",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083370-xpa03rlw7ga.jpg",
             "sortOrder": 3,
             "description": "개별 수영장",
             "isSelected": true
           },
           {
+            "id": "967c4dd8-0473-4c65-9f83-42be97d7cab8",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/69e2885c-4500-4324-b9f3-9d212dd56673/main/1767146083370-oavwcsra5t8.jpeg",
             "sortOrder": 4,
             "description": "개별 수영장",
@@ -114,44 +120,51 @@
         "displayOrder": 1,
         "images": [
           {
+            "id": "b9ca6916-eb18-4595-bc1a-99cdcc072d4f",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-j6uu8c0p4zc.jpg",
+            "sortOrder": 1,
+            "description": "루프탑 실외 수영장",
+            "isSelected": true
+          },
+          {
+            "id": "8bf08098-0f48-4a03-a21b-832cf01f35fc",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767083583183-onvzuqxxo8c.jpg",
             "sortOrder": 0,
             "description": "루프탑 실외 수영장",
             "isSelected": false
           },
           {
+            "id": "2b7e3a9a-9592-4adf-b230-7ce3596ac958",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767083583184-g7rbjqne235.jpeg",
             "sortOrder": 1,
             "description": "루프탑 실외 수영장",
             "isSelected": false
           },
           {
+            "id": "7ca8c576-b26f-4a33-8aec-9ac09af8d38a",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-71ywmhw9awg.jpg",
             "sortOrder": 3,
             "description": "루프탑 실외 수영장",
             "isSelected": true
           },
           {
+            "id": "5c6f4154-531f-4ac3-9112-344ce964b552",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-dznz1ieozo.jpg",
             "sortOrder": 4,
             "description": "루프탑 실외 수영장",
             "isSelected": true
           },
           {
+            "id": "f74f4b72-8413-4bc1-920b-a250511f1ff2",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-adhpgmwadip.jpg",
             "sortOrder": 2,
             "description": "루프탑 실외 수영장",
             "isSelected": true
           },
           {
+            "id": "ece9a657-6813-45ff-b777-6360103b12c5",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-3frn5tu22n3.jpg",
             "sortOrder": 0,
-            "description": "루프탑 실외 수영장",
-            "isSelected": true
-          },
-          {
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/733049e9-83d0-4569-8d42-8622a4adbd7b/main/1767146085421-j6uu8c0p4zc.jpg",
-            "sortOrder": 1,
             "description": "루프탑 실외 수영장",
             "isSelected": true
           }
@@ -165,37 +178,43 @@
         "displayOrder": 2,
         "images": [
           {
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767083584688-et6pfa63j9b.jpeg",
-            "sortOrder": 0,
-            "description": "스파",
-            "isSelected": true
-          },
-          {
+            "id": "0a2cad29-86db-41ef-8409-9d0b67218656",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086895-kc5sd5b0en.jpg",
             "sortOrder": 1,
             "description": "스파",
             "isSelected": true
           },
           {
+            "id": "b525ad7c-3a16-4dc6-a258-f656d290c427",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086895-0revyzcjzueo.jpeg",
             "sortOrder": 2,
             "description": "스파",
             "isSelected": true
           },
           {
+            "id": "dd6fb1ed-10f3-421a-9bd0-632fb4ae89cd",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086895-yded0mk1mef.jpg",
             "sortOrder": 3,
             "description": "스파",
             "isSelected": true
           },
           {
+            "id": "7253b472-6062-4e70-85b6-9e6e8f91a247",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086896-scqvwcywdos.jpg",
             "sortOrder": 4,
             "description": "스파",
             "isSelected": true
           },
           {
+            "id": "06549008-4304-4895-8692-b54bd760cf39",
             "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767146086895-2znujg5ic04.jpg",
+            "sortOrder": 0,
+            "description": "스파",
+            "isSelected": true
+          },
+          {
+            "id": "dadb1fe6-18e1-41a9-9419-3e52a48705f9",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/facility/4b7041f4-03f5-452a-b5c2-e80487ab4db3/main/1767083584688-et6pfa63j9b.jpeg",
             "sortOrder": 0,
             "description": "스파",
             "isSelected": true
@@ -258,30 +277,9 @@
       {
         "thumbnail": [
           {
-            "id": "a183fca1-449c-43db-96b8-0bfcbb23aa21",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-egpcuwxyhpp.jpg",
-            "sortOrder": 4,
-            "description": "",
-            "isSelected": false
-          },
-          {
-            "id": "529ca245-4219-4a6a-8fb9-488521703cef",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-tlf7jfgar.jpg",
-            "sortOrder": 2,
-            "description": "",
-            "isSelected": false
-          },
-          {
-            "id": "aee57d7c-e8d6-4474-80c0-0adb4506dc5a",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-40a66lfrzba.jpg",
-            "sortOrder": 5,
-            "description": "",
-            "isSelected": false
-          },
-          {
-            "id": "8c417119-984c-4086-9372-7e86291f273a",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-2kkrbv3s9ok.jpg",
-            "sortOrder": 3,
+            "id": "f60cb2f9-4649-4553-8dfe-95f5e6ecc20e",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579144-y9p21fz90n.jpg",
+            "sortOrder": 0,
             "description": "",
             "isSelected": false
           },
@@ -293,9 +291,30 @@
             "isSelected": true
           },
           {
-            "id": "f60cb2f9-4649-4553-8dfe-95f5e6ecc20e",
-            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579144-y9p21fz90n.jpg",
-            "sortOrder": 0,
+            "id": "529ca245-4219-4a6a-8fb9-488521703cef",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-tlf7jfgar.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": false
+          },
+          {
+            "id": "8c417119-984c-4086-9372-7e86291f273a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-2kkrbv3s9ok.jpg",
+            "sortOrder": 3,
+            "description": "",
+            "isSelected": false
+          },
+          {
+            "id": "a183fca1-449c-43db-96b8-0bfcbb23aa21",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-egpcuwxyhpp.jpg",
+            "sortOrder": 4,
+            "description": "",
+            "isSelected": false
+          },
+          {
+            "id": "aee57d7c-e8d6-4474-80c0-0adb4506dc5a",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/property/a0c6c135-924b-4627-bc31-303bbded79a2/thumbnail/1767083579145-40a66lfrzba.jpg",
+            "sortOrder": 5,
             "description": "",
             "isSelected": false
           }
@@ -343,8 +362,8 @@
     ],
     "nameEn": "Sokcho W Spa PoolVilla",
     "domain": "wpoolvilla.kr",
-    "realtimeBookingId": "10289",
-    "ybsId": "79064"
+    "realtimeBookingId": "https://www.bookingplay.co.kr/booking/1/10289",
+    "ybsId": ""
   },
   "rooms": [
     {
@@ -375,6 +394,7 @@
         "인덕션",
         "전기밥솥",
         "전기포트",
+        "스파",
         "샴푸",
         "린스",
         "바디워시",
@@ -2480,7 +2500,49 @@
       },
       "popup": {
         "popups": []
-      }
-    }
+      },
+      "property": {
+        "images": []
+      },
+      "roomtypes": [
+        {
+          "id": "fd5b63c1-66db-4ea8-a804-bdf97b2257ac",
+          "images": []
+        },
+        {
+          "id": "79423ca7-64f0-4ac5-9ca6-b3c2f29086f1",
+          "images": []
+        },
+        {
+          "id": "a5040ea4-40e1-4a46-9a2e-0531ecce7dc0",
+          "images": []
+        },
+        {
+          "id": "84cc179a-a311-4662-92af-391489c9899b",
+          "images": []
+        },
+        {
+          "id": "5d930913-b39a-4097-b813-a86cb7a43fb2",
+          "images": []
+        },
+        {
+          "id": "4c44586f-45fb-4f51-b886-15082f941da1",
+          "images": []
+        },
+        {
+          "id": "a2a8101f-93c1-430b-830f-dd56eee8261e",
+          "images": []
+        },
+        {
+          "id": "1827105d-be33-4d7d-bf3e-67f23c063fcb",
+          "images": []
+        },
+        {
+          "id": "9f8997ae-c2a2-4d60-b4b6-7db62fb96e04",
+          "images": []
+        }
+      ]
+    },
+    "id": "5c3c5977-6247-4e43-a07f-c82001f9553f"
   }
 }
