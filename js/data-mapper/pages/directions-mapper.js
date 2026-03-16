@@ -84,8 +84,8 @@ class DirectionsMapper extends BaseDataMapper {
     }
 
     /**
-     * Location Info 섹션 매핑 (숙소명, 주소)
-     * property.name → [data-property-name]
+     * Location Info 섹션 매핑 (숙소명, 주소) - customFields 우선
+     * customFields.property.name → [data-property-name]
      * property.address → [data-directions-address]
      */
     mapLocationInfo() {
@@ -93,13 +93,13 @@ class DirectionsMapper extends BaseDataMapper {
 
         const property = this.data.property;
 
-        // 숙소명 매핑 (타이틀 내 span)
+        // 숙소명 매핑 (customFields 우선)
         const propertyNameElement = this.safeSelect('[data-property-name]');
         if (propertyNameElement) {
-            propertyNameElement.textContent = this.sanitizeText(property?.name, '숙소명');
+            propertyNameElement.textContent = this.getPropertyName();
         }
 
-        // 주소 매핑
+        // 주소 매핑 (시스템 데이터)
         const addressElement = this.safeSelect('[data-directions-address]');
         if (addressElement) {
             addressElement.textContent = this.sanitizeText(property?.address, '숙소 주소');
@@ -133,54 +133,48 @@ class DirectionsMapper extends BaseDataMapper {
     }
 
     /**
-     * Full Banner 섹션 매핑
-     * property.nameEn → [data-directions-banner-title]
-     * property.images[0].exterior[] → [data-directions-banner-bg] 배경 이미지
+     * Full Banner 섹션 매핑 (customFields 우선)
+     * customFields.property.nameEn → [data-directions-banner-title]
+     * customFields.property.images (property_exterior) → [data-directions-banner-bg] 배경 이미지
      */
     mapFullBanner() {
         if (!this.isDataLoaded) return;
 
-        // 배너 타이틀 매핑 (property.nameEn)
+        // 배너 타이틀 매핑 (customFields 우선)
         const bannerTitle = this.safeSelect('[data-directions-banner-title]');
         if (bannerTitle) {
-            const nameEn = this.safeGet(this.data, 'property.nameEn');
-            bannerTitle.textContent = this.sanitizeText(nameEn, 'PROPERTY NAME').toUpperCase();
+            bannerTitle.textContent = this.getPropertyNameEn().toUpperCase();
         }
 
-        // 배너 배경 이미지 매핑
+        // 배너 배경 이미지 매핑 (customFields 우선)
         const bannerBg = this.safeSelect('[data-directions-banner-bg]');
         if (!bannerBg) return;
 
-        const propertyImages = this.safeGet(this.data, 'property.images');
-        const exteriorImages = this.safeGet(propertyImages?.[0], 'exterior');
+        // customFields에서 property_exterior 카테고리 이미지 가져오기
+        const exteriorImages = this.getPropertyImages('property_exterior');
 
-        // ImageHelpers를 사용하여 첫 번째 선택된 이미지 가져오기
-        const targetImage = ImageHelpers.getFirstSelectedImage(exteriorImages);
-
-        if (targetImage) {
-            bannerBg.style.backgroundImage = `url('${targetImage.url}')`;
+        if (exteriorImages.length > 0) {
+            bannerBg.style.backgroundImage = `url('${exteriorImages[0].url}')`;
         } else {
             bannerBg.style.backgroundImage = `url('${ImageHelpers.EMPTY_IMAGE_WITH_ICON}')`;
         }
     }
 
     /**
-     * Marquee 섹션 매핑
-     * property.nameEn → [data-marquee-property-name] 내부 span들 (uppercase)
+     * Marquee 섹션 매핑 (customFields 우선)
+     * customFields.property.nameEn → [data-marquee-property-name] 내부 span들 (uppercase)
      */
     mapMarqueeSection() {
         if (!this.isDataLoaded) return;
 
-        const property = this.safeGet(this.data, 'property');
         const marqueeContainer = this.safeSelect('[data-marquee-property-name]');
-
-        if (!marqueeContainer || !property || !property.nameEn) return;
+        if (!marqueeContainer) return;
 
         // 기존 span 제거
         marqueeContainer.innerHTML = '';
 
-        // 5개의 span 생성
-        const nameEnUpper = this.sanitizeText(property.nameEn, 'PROPERTY NAME').toUpperCase();
+        // 5개의 span 생성 (customFields 우선)
+        const nameEnUpper = this.getPropertyNameEn().toUpperCase();
 
         for (let i = 0; i < 5; i++) {
             const span = document.createElement('span');
@@ -198,6 +192,7 @@ class DirectionsMapper extends BaseDataMapper {
         }
 
         const property = this.data.property;
+        const propertyName = this.getPropertyName(); // customFields 우선
         const mapContainer = document.getElementById('kakao-map');
 
         if (!mapContainer || !property.latitude || !property.longitude) {
@@ -208,7 +203,7 @@ class DirectionsMapper extends BaseDataMapper {
         const createMap = () => {
             try {
                 // 검색 쿼리 및 URL 생성 (한 번만)
-                const searchQuery = property.address || property.name || '선택한 위치';
+                const searchQuery = property.address || propertyName || '선택한 위치';
                 const kakaoMapUrl = `https://map.kakao.com/?q=${encodeURIComponent(searchQuery)}`;
                 const openKakaoMap = () => window.open(kakaoMapUrl, '_blank');
 
@@ -239,7 +234,7 @@ class DirectionsMapper extends BaseDataMapper {
                 // 인포윈도우 콘텐츠 DOM 생성 및 이벤트 핸들러 연결
                 const infowindowContent = document.createElement('div');
                 infowindowContent.style.cssText = 'padding:5px; font-size:14px; cursor:pointer;';
-                infowindowContent.innerHTML = `${property.name}<br/><small style="color:#666;">클릭하면 카카오맵으로 이동</small>`;
+                infowindowContent.innerHTML = `${propertyName}<br/><small style="color:#666;">클릭하면 카카오맵으로 이동</small>`;
                 infowindowContent.addEventListener('click', openKakaoMap);
 
                 const infowindow = new kakao.maps.InfoWindow({
@@ -288,12 +283,12 @@ class DirectionsMapper extends BaseDataMapper {
         this.mapMarqueeSection(); // Marquee 섹션 매핑
         this.initKakaoMap(); // 카카오맵 초기화 및 표시
 
-        // 메타 태그 업데이트 (페이지별 SEO 적용)
-        const property = this.data.property;
+        // 메타 태그 업데이트 (페이지별 SEO 적용, customFields 우선)
+        const propertyNameForSEO = this.getPropertyName();
         const directionsData = this.safeGet(this.data, 'homepage.customFields.pages.directions.sections.0.hero');
         const pageSEO = {
-            title: property?.name ? `오시는길 - ${property.name}` : 'SEO 타이틀',
-            description: directionsData?.description || property?.description || 'SEO 설명'
+            title: `오시는길 - ${propertyNameForSEO}`,
+            description: directionsData?.description || this.data.property?.description || 'SEO 설명'
         };
         this.updateMetaTags(pageSEO);
 
