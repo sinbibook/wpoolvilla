@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.17.0",
-    "generatedAt": "2026-03-16T06:32:26.166Z",
+    "version": "1.18.0",
+    "generatedAt": "2026-03-16T06:35:42.512Z",
     "templateType": "fullpage_scroll",
     "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
     "homepageId": "5c3c5977-6247-4e43-a07f-c82001f9553f"
@@ -2511,7 +2511,24 @@
         "popups": []
       },
       "property": {
-        "images": []
+        "images": [
+          {
+            "id": "4ee99b79-47d7-4bea-8fe2-a52d133a0af9",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/property_exterior/1773642937077-uvfb6qkp33h.jpg",
+            "sortOrder": 1,
+            "description": "",
+            "isSelected": true,
+            "category": "property_exterior"
+          },
+          {
+            "id": "1a79a9f9-cf25-45ff-bdbd-178ec64254ef",
+            "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/property_surrounding/1773642937078-re7gbtitib.jpg",
+            "sortOrder": 2,
+            "description": "",
+            "isSelected": true,
+            "category": "property_surrounding"
+          }
+        ]
       },
       "roomtypes": [
         {
@@ -2551,6 +2568,7 @@
           "images": []
         }
       ]
-    }
+    },
+    "id": "5c3c5977-6247-4e43-a07f-c82001f9553f"
   }
 }
