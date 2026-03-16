@@ -336,13 +336,14 @@ class FacilityMapper extends BaseDataMapper {
     }
 
     /**
-     * Marquee 매핑 (property.nameEn)
+     * Marquee 매핑 (customFields 우선)
      */
     mapMarquee() {
         const marqueeContainer = this.safeSelect('[data-marquee-property-name]');
         if (!marqueeContainer) return;
 
-        const propertyNameEn = this.data.property?.nameEn || 'Property Name';
+        // customFields 우선
+        const propertyNameEn = this.getPropertyNameEn();
 
         marqueeContainer.innerHTML = '';
         for (let i = 0; i < 5; i++) {
@@ -452,11 +453,11 @@ class FacilityMapper extends BaseDataMapper {
         this.mapGallery();              // Gallery
         this.mapMarquee();              // Marquee
 
-        // 메타 태그 업데이트 (페이지별 SEO 적용)
-        const property = this.data.property;
+        // 메타 태그 업데이트 (페이지별 SEO 적용, customFields 우선)
+        const propertyNameForSEO = this.getPropertyName();
         const pageSEO = {
-            title: (facility?.name && property?.name) ? `${facility.name} - ${property.name}` : 'SEO 타이틀',
-            description: facility?.description || property?.description || 'SEO 설명'
+            title: `${facility?.name || '시설'} - ${propertyNameForSEO}`,
+            description: facility?.description || this.data.property?.description || 'SEO 설명'
         };
         this.updateMetaTags(pageSEO);
 
