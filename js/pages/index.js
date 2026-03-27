@@ -301,7 +301,7 @@ class FullpageScroll {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
                 section.style.height = 'auto';
-                section.style.minHeight = '100vh';
+                section.style.minHeight = (section.classList.contains('hero-section') || section.classList.contains('closing-section')) ? '50vh' : '100vh';
             });
 
             // fp-section 클래스 제거
@@ -638,7 +638,7 @@ function enableMobileScroll() {
     const sections = document.querySelectorAll('.section, .fp-section');
     sections.forEach(section => {
         section.style.height = 'auto';
-        section.style.minHeight = '100vh';
+        section.style.minHeight = (section.classList.contains('hero-section') || section.classList.contains('closing-section')) ? '50vh' : '100vh';
         section.classList.remove('fp-section');
     });
 

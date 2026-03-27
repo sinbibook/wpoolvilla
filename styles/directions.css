@@ -153,6 +153,10 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh !important;
+    }
+
     .location-section {
         padding: 60px 20px;
     }
