@@ -567,8 +567,8 @@ img {
 /* Gallery Slider */
 .gallery-slider-wrapper {
     width: 100%;
-    height: 450px;
-    overflow: hidden;
+    height: 500px;
+    overflow: visible;
     position: relative;
     z-index: 10;
     display: flex;
@@ -598,21 +598,21 @@ img {
 }
 
 /* Alternating layout: vertical (portrait) - 사이즈 조정 */
-.gallery-item:nth-child(odd) {
+.gallery-item.portrait {
     width: 300px;
     height: 400px;
 }
 
 /* Alternating layout: horizontal (landscape) - 사이즈 조정 */
-.gallery-item:nth-child(even) {
-    width: 400px;
+.gallery-item.landscape {
+    width: 550px;
     height: 300px;
 }
 
 .gallery-item-image {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 350px;
     overflow: hidden;
     border-radius: 0;
 }
@@ -671,12 +671,12 @@ img {
         padding: 0 20px;
     }
 
-    .gallery-item:nth-child(odd) {
+    .gallery-item.portrait {
         width: 40vh;
         height: 55vh;
     }
 
-    .gallery-item:nth-child(even) {
+    .gallery-item.landscape {
         width: 55vh;
         height: 40vh;
     }
@@ -1212,7 +1212,7 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 
 .gallery-item {
     flex: 1;
-    max-width: 320px;
+    max-width: none;
     position: relative;
     opacity: 0;
     transform: translateY(30px);
@@ -1242,7 +1242,7 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
 
 .gallery-item img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
     display: block;
     transition: none;

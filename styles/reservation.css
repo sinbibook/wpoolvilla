@@ -312,6 +312,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh !important;
+    }
+
     .reservation-about-section {
         padding: 60px 30px;
     }
