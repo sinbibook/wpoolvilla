@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.28.0",
-    "generatedAt": "2026-03-30T06:52:33.129Z",
+    "version": "1.29.0",
+    "generatedAt": "2026-04-28T01:41:49.952Z",
     "templateType": "fullpage_scroll",
     "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
     "homepageId": "5c3c5977-6247-4e43-a07f-c82001f9553f"
@@ -340,18 +340,35 @@
   "rooms": [
     {
       "id": "fd5b63c1-66db-4ea8-a804-bdf97b2257ac",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A601(풀오션뷰,실내풀빌라,스파,테라스)",
+      "nameEn": "A601 (No Pets)",
       "description": "펜트하우스룸 : 프라이빗온수풀 + 스파 + 개별테라스 + 침실 + 주방 + 샤워실 + 화장실\n침대 2개 : 킹1+싱글1\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "펜트하우스룸 : 프라이빗온수풀 + 스파 + 개별테라스 + 침실 + 주방 + 샤워실 + 화장실\n침대 2개 : 킹1+싱글1\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A601(풀오션뷰,실내풀빌라,스파,테라스)",
       "size": 125,
+      "sizePyeong": 37.8,
       "baseOccupancy": 3,
       "maxOccupancy": 6,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드",
@@ -382,6 +399,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -518,22 +536,43 @@
           ]
         }
       ],
-      "displayOrder": 1
+      "displayOrder": 1,
+      "createdAt": "2025-12-30T08:51:55.484Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "79423ca7-64f0-4ac5-9ca6-b3c2f29086f1",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A502(풀오션뷰,스파,테라스)",
+      "nameEn": "A502 (No Pets)",
       "description": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n펜트하우스룸 : 프라이빗온수풀 + 스파 + 개별테라스 + 침실 + 주방 + 샤워실 + 화장실\n침대 2개 : 킹1+싱글1\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n펜트하우스룸 : 프라이빗온수풀 + 스파 + 개별테라스 + 침실 + 주방 + 샤워실 + 화장실\n침대 2개 : 킹1+싱글1\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A502(풀오션뷰,스파,테라스)",
       "size": 56,
+      "sizePyeong": 16.9,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드"
@@ -561,6 +600,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -662,22 +702,43 @@
           ]
         }
       ],
-      "displayOrder": 2
+      "displayOrder": 2,
+      "createdAt": "2025-12-30T08:51:55.560Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "a5040ea4-40e1-4a46-9a2e-0531ecce7dc0",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A501(풀오션뷰,스파)",
+      "nameEn": "A501 (No Pets)",
       "description": "침대룸 : 스파+침대1+주방+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "침대룸 : 스파+침대1+주방+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A501(풀오션뷰,스파)",
       "size": 49,
+      "sizePyeong": 14.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드"
@@ -705,6 +766,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -813,22 +875,43 @@
           ]
         }
       ],
-      "displayOrder": 3
+      "displayOrder": 3,
+      "createdAt": "2025-12-30T08:51:55.613Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "84cc179a-a311-4662-92af-391489c9899b",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A402(풀오션뷰,스파)",
+      "nameEn": "A402",
       "description": "침대룸 : 스파+침대1+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "침대룸 : 스파+침대1+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A402(풀오션뷰,스파)",
       "size": 49,
+      "sizePyeong": 14.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드"
@@ -856,6 +939,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -950,22 +1034,43 @@
           ]
         }
       ],
-      "displayOrder": 4
+      "displayOrder": 4,
+      "createdAt": "2025-12-30T08:51:55.561Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "5d930913-b39a-4097-b813-a86cb7a43fb2",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A401(풀오션뷰,스파,테라스)",
+      "nameEn": "A401 (No Pets)",
       "description": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A401(풀오션뷰,스파,테라스)",
       "size": 56,
+      "sizePyeong": 16.9,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드"
@@ -993,6 +1098,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -1101,22 +1207,43 @@
           ]
         }
       ],
-      "displayOrder": 5
+      "displayOrder": 5,
+      "createdAt": "2025-12-30T08:51:55.781Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "4c44586f-45fb-4f51-b886-15082f941da1",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A302(풀오션뷰,스파,테라스)",
+      "nameEn": "A302 (No Pets)",
       "description": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "침대룸 : 스파+개별테라스+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A302(풀오션뷰,스파,테라스)",
       "size": 56,
+      "sizePyeong": 16.9,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드"
@@ -1144,6 +1271,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -1294,22 +1422,43 @@
           ]
         }
       ],
-      "displayOrder": 6
+      "displayOrder": 6,
+      "createdAt": "2025-12-30T08:51:55.931Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "a2a8101f-93c1-430b-830f-dd56eee8261e",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A301(풀오션뷰,스파)",
+      "nameEn": "A301 (No Pets)",
       "description": "침대룸 : 스파+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "침대룸 : 스파+침실+주방+샤워실+화장실\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A301(풀오션뷰,스파)",
       "size": 49,
+      "sizePyeong": 14.8,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드"
@@ -1337,6 +1486,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -1522,22 +1672,43 @@
           ]
         }
       ],
-      "displayOrder": 7
+      "displayOrder": 7,
+      "createdAt": "2025-12-30T08:51:55.840Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "1827105d-be33-4d7d-bf3e-67f23c063fcb",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A202(풀오션뷰,스파,테라스)",
+      "nameEn": "A202 (No Pets)",
       "description": "침대룸 : 프라이빗야외풀+스파+개별테라스+침대2+주방+샤워실+화장실\n야외풀빌라 미온수 불가(7~8월 운영)\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "침대룸 : 프라이빗야외풀+스파+개별테라스+침대2+주방+샤워실+화장실\n야외풀빌라 미온수 불가(7~8월 운영)\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A202(풀오션뷰,스파,테라스)",
       "size": 56,
+      "sizePyeong": 16.9,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드"
@@ -1565,6 +1736,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -1666,22 +1838,43 @@
           ]
         }
       ],
-      "displayOrder": 8
+      "displayOrder": 8,
+      "createdAt": "2025-12-30T08:51:55.556Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     },
     {
       "id": "9f8997ae-c2a2-4d60-b4b6-7db62fb96e04",
+      "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
+      "propertyName": "속초 더블유 풀빌라 스파펜션",
       "name": "A201(풀오션뷰,와이드테라스,스파)",
+      "nameEn": "A201 (No Pets)",
       "description": "침대룸 : 프라이빗야외풀+스파+개별테라스+침실+주방+샤워실+화장실\n야외풀빌라 미온수 불가(7~8월만 운영)\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "roomInfo": "침대룸 : 프라이빗야외풀+스파+개별테라스+침실+주방+샤워실+화장실\n야외풀빌라 미온수 불가(7~8월만 운영)\n\n[인원추가요금 (1박기준/현장결제) ]\n- 풀빌라 객실(A601,B602) : 24개월 이상 30,000원\n- 스파 객실(풀빌라 객실 제외) : 24개월 이상 20,000원 \n- 실외풀 객실(A201,A202,B203,B204) 7~8월 (야외풀 운영 기간) : 24개월 이상 30,000원 \n- 24개월 이하 영유아의 경우 1명 무료이며 2명 이상부터 1인 추가 금액 발생\n- 비대면 입실 시스템으로 입실 하루 전 추가비 사전 결제 안내연락드립니다.",
       "usageGuide": "",
       "group": "A201(풀오션뷰,와이드테라스,스파)",
       "size": 56,
+      "sizePyeong": 16.9,
       "baseOccupancy": 2,
       "maxOccupancy": 4,
       "totalRoomCount": {
         "bedroom": 1,
         "bathroom": 0,
-        "livingRoom": 0
+        "livingRoom": 1,
+        "ondol": 0,
+        "kitchen": 0
+      },
+      "roomOptions": {
+        "petState": "N",
+        "barbecueState": "N",
+        "poolState": "N"
+      },
+      "timeSettings": {
+        "timeSettingType": "property",
+        "checkin": "15:00",
+        "checkout": "11:00",
+        "checkinDeadline": "22:00"
       },
       "bedTypes": [
         "킹 베드"
@@ -1709,6 +1902,7 @@
       ],
       "roomStructures": [],
       "status": "active",
+      "bankAccountId": "9d798d59-a99f-47b3-8dd6-33fbd9615678",
       "images": [
         {
           "thumbnail": [
@@ -1831,7 +2025,11 @@
           ]
         }
       ],
-      "displayOrder": 9
+      "displayOrder": 9,
+      "createdAt": "2025-12-30T08:51:55.854Z",
+      "updatedAt": "2026-02-23T12:56:50.946Z",
+      "createdBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2",
+      "updatedBy": "3a2aa390-fb70-475b-895f-b6e3ea8ef4a2"
     }
   ],
   "homepage": {
@@ -1865,29 +2063,29 @@
                 "title": "속초 더블유 풀빌라 스파펜션",
                 "images": [
                   {
-                    "id": "5710f344-6b2b-43ff-91f0-8ae135d1e660",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1774851454129-vdk60cp3rck.jpg",
-                    "sortOrder": 0,
-                    "description": "",
-                    "isSelected": true
-                  },
-                  {
-                    "id": "ac383ae7-c1de-4441-8609-4bc194510aff",
-                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1774851264248-rd88jx5drgr.jpg",
-                    "sortOrder": 1,
-                    "description": "",
-                    "isSelected": true
-                  },
-                  {
                     "id": "5ef8c9e0-111c-4665-9dee-a25b07eb6b9d",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1774851264248-uo75f1xxmlc.jpg",
-                    "sortOrder": 2,
+                    "sortOrder": 0,
                     "description": "",
                     "isSelected": true
                   },
                   {
                     "id": "dcd3db91-fdb4-4b6d-a883-ee6e6d85e331",
                     "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1774851264248-zncbufegxz.jpg",
+                    "sortOrder": 1,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "ac383ae7-c1de-4441-8609-4bc194510aff",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1774851264248-rd88jx5drgr.jpg",
+                    "sortOrder": 2,
+                    "description": "",
+                    "isSelected": true
+                  },
+                  {
+                    "id": "5710f344-6b2b-43ff-91f0-8ae135d1e660",
+                    "url": "https://jlnjajtcnyqupfaqjerz.supabase.co/storage/v1/object/public/app-images/homepage/5c3c5977-6247-4e43-a07f-c82001f9553f/index_hero/1774851454129-vdk60cp3rck.jpg",
                     "sortOrder": 3,
                     "description": "",
                     "isSelected": true
@@ -1907,6 +2105,8 @@
                     "isSelected": true
                   }
                 ],
+                "videos": [],
+                "mediaType": "image",
                 "description": "동해바다와 가장 가까운 곳"
               },
               "closing": {
@@ -1920,7 +2120,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": "  "
+                "description": "  ",
+                "mediaType": "image",
+                "videos": []
               },
               "essence": {
                 "title": "프리미엄 오션뷰 풀빌라",
@@ -1933,7 +2135,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": "속초 바다 바로 앞에서 마주하는 탁 트인 오션뷰,\n프라이빗 스파와 풀빌라 시설로 완성되는 여유로운 휴식.\n바다와 가장 가까운 자리에서 프리미엄한 하루를 경험하세요."
+                "description": "속초 바다 바로 앞에서 마주하는 탁 트인 오션뷰,\n프라이빗 스파와 풀빌라 시설로 완성되는 여유로운 휴식.\n바다와 가장 가까운 자리에서 프리미엄한 하루를 경험하세요.",
+                "mediaType": "image",
+                "videos": []
               },
               "gallery": {
                 "title": "GALLERY",
@@ -1981,7 +2185,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": "\n"
+                "description": "\n",
+                "mediaType": "image",
+                "videos": []
               },
               "signature": {
                 "title": "W’s Specials",
@@ -2008,7 +2214,9 @@
                     "isSelected": true
                   }
                 ],
-                "description": "프라이빗풀에서 시작되는 여유로운 시간,\n하늘과 바다가 맞닿은 오션뷰 루프탑 수영장.\n오션뷰 스파와 테라스에서 즐기는 깊은 휴식과\n밤이 더해지는 바베큐 파티까지.\n\n머무는 하루가 특별해지는\nW만의 순간을 경험하세요."
+                "description": "프라이빗풀에서 시작되는 여유로운 시간,\n하늘과 바다가 맞닿은 오션뷰 루프탑 수영장.\n오션뷰 스파와 테라스에서 즐기는 깊은 휴식과\n밤이 더해지는 바베큐 파티까지.\n\n머무는 하루가 특별해지는\nW만의 순간을 경험하세요.",
+                "mediaType": "image",
+                "videos": []
               }
             }
           ]
@@ -2486,7 +2694,9 @@
             "isSelected": true,
             "category": "property_exterior"
           }
-        ]
+        ],
+        "name": "속초 더블유 풀빌라 스파펜션",
+        "nameEn": "Sokcho W Spa PoolVilla"
       },
       "roomtypes": [
         {
