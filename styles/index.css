@@ -88,13 +88,22 @@ body {
 
 /* 모바일 반응형 */
 @media (max-width: 768px) {
-    /* 모바일에서 일반 스크롤 강제 활성화 */
-    html, body {
-        overflow: auto !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
+    /* 모바일: 스크롤 컨테이너는 뷰포트 하나로 통일 (html/body 둘 다 overflow clip 사용).
+       overflow-x: hidden + overflow-y: visible 조합은 브라우저가 y를 auto로 강제 치환하여
+       중첩 스크롤 컨테이너가 되므로, clip을 써서 스크롤 컨테이너 생성 자체를 막는다.
+       결과: 페이지 스크롤은 오로지 윈도우(뷰포트) 하나만 담당 → iOS 모멘텀 꼬임 제거. */
+    html {
+        overflow-x: hidden !important; /* fallback for browsers without `clip` */
+        overflow-x: clip !important;
         height: auto !important;
-        position: relative !important;
+        scroll-behavior: auto !important;
+    }
+
+    body {
+        overflow-x: hidden !important; /* fallback */
+        overflow-x: clip !important;
+        height: auto !important;
+        overscroll-behavior-y: none;
     }
 
     /* 모바일에서는 fp-nav 보정 제거 */
@@ -120,7 +129,8 @@ body {
     .fp-section,
     .section {
         height: auto !important;
-        min-height: 100vh !important;
+        min-height: 100vh; /* fallback */
+        min-height: 100svh !important; /* 주소창 show/hide로 안 변하는 고정 뷰포트 높이 */
         position: relative !important;
         transform: none !important;
         top: auto !important;
@@ -131,12 +141,14 @@ body {
     .section.hero-section,
     .fp-section.closing-section,
     .section.closing-section {
-        min-height: 50vh !important;
+        min-height: 50vh;
+        min-height: 50svh !important;
     }
 
     /* Signature Section 모바일 조정 */
     .signature-section {
-        min-height: 50vh !important;
+        min-height: 50vh;
+        min-height: 50svh !important;
         height: auto !important;
         padding: 80px 20px !important;
     }
@@ -218,14 +230,24 @@ body {
 
     /* 모바일 갤러리 스타일 수정 */
     .gallery-section {
-        min-height: 100vh !important;
+        min-height: 100vh;
+        min-height: 100svh !important;
         height: auto !important;
         background: linear-gradient(to bottom, var(--color-secondary) 0%, var(--color-secondary) 50%, var(--color-primary) 50%, var(--color-primary) 100%) !important;
     }
 
+    /* 모바일 주소창 show/hide 시 100vh 재계산으로 인한 스크롤 점프 방지 */
+    .gallery-section .section-wrapper,
+    .closing-section .section-wrapper {
+        height: auto !important;
+        min-height: 100vh;
+        min-height: 100svh !important;
+    }
+
     .gallery-container {
         height: auto !important;
-        min-height: 100vh !important;
+        min-height: 100vh;
+        min-height: 100svh !important;
         padding: 40px 0 !important;
     }
 
@@ -251,6 +273,12 @@ body {
     .gallery-header {
         padding: 40px 20px !important;
         text-align: center !important;
+    }
+
+    /* 모바일: 상시 구동되는 장식 애니메이션 정지 (스크롤 중 페인트 부하 제거) */
+    .essence-right::before,
+    .signature-left::before {
+        animation: none !important;
     }
 }
 
@@ -341,6 +369,76 @@ body {
     100% {
         transform: translateY(15px);
         opacity: 0;
+    }
+}
+
+/* ================================
+   Video Section Styles
+   ================================ */
+
+/* Hero Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Essence Video */
+.essence-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Signature Video */
+.signature-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gallery Video */
+.gallery-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Closing Video */
+.closing-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .essence-video {
+        flex: none;
+        width: 100%;
+        height: 60vh;
+        height: 60svh;
+        min-height: 400px;
+    }
+
+    .signature-video {
+        width: 100%;
+        height: 60vh;
+        height: 60svh;
+        min-height: 300px;
+    }
+
+    .gallery-video {
+        width: 100%;
+        height: 60vh;
+        height: 60svh;
+        min-height: 300px;
     }
 }
 
@@ -834,11 +932,13 @@ body {
     .section {
         height: auto !important;
         min-height: 100vh;
+        min-height: 100svh;
     }
 
     .section.hero-section,
     .section.closing-section {
         min-height: 50vh;
+        min-height: 50svh;
     }
 
     .fp-nav a {
@@ -864,6 +964,7 @@ body {
     .essence-right {
         width: 100%;
         height: 50vh;
+        height: 50svh;
     }
 
     .essence-right {
@@ -878,12 +979,22 @@ body {
     .signature-left,
     .signature-right {
         width: 100%;
-        height: 50vh;
         padding: 0;
     }
 
+    /* 모바일: 고정 50svh + overflow:hidden 조합으로 signature-content가
+       위아래로 잘려 보이는 문제 제거. 콘텐츠 높이 그대로 따라가게 하되
+       flex 수직 센터 정렬은 유지 (콘텐츠가 짧을 때의 시각적 위치 보존). */
     .signature-left {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
         padding: 40px 20px;
+    }
+
+    .signature-right {
+        height: 50vh;
+        height: 50svh;
     }
 
     .essence-title {

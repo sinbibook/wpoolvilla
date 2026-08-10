@@ -42,13 +42,16 @@ class IndexMapper extends BaseDataMapper {
      * 슬라이더 재초기화
      */
     reinitializeSliders() {
-        // Hero 슬라이더 재초기화
-        if (typeof window.initHeroSlider === 'function') {
+        const heroData = this.safeGet(this.data, 'homepage.customFields.pages.index.sections.0.hero');
+        const galleryData = this.safeGet(this.data, 'homepage.customFields.pages.index.sections.0.gallery');
+
+        // Hero 슬라이더 재초기화 (영상 모드일 때 스킵)
+        if (heroData?.mediaType !== 'video' && typeof window.initHeroSlider === 'function') {
             window.initHeroSlider();
         }
 
-        // Gallery 슬라이더 재초기화
-        if (typeof window.initGallerySlider === 'function') {
+        // Gallery 슬라이더 재초기화 (영상 모드일 때 스킵)
+        if (galleryData?.mediaType !== 'video' && typeof window.initGallerySlider === 'function') {
             window.initGallerySlider();
         }
 
@@ -63,6 +66,9 @@ class IndexMapper extends BaseDataMapper {
         const signatureData = this.safeGet(this.data, 'homepage.customFields.pages.index.sections.0.signature');
         if (!signatureData || !signatureData.images) return;
 
+        // 영상 모드일 때는 인터랙션 초기화 스킵
+        if (signatureData.mediaType === 'video') return;
+
         const selectedImages = signatureData.images
             .filter(img => img.isSelected === true)
             .sort((a, b) => a.sortOrder - b.sortOrder)
@@ -72,23 +78,27 @@ class IndexMapper extends BaseDataMapper {
 
         const mainImg = this.safeSelect('[data-signature-main-img]');
         const description = this.safeSelect('[data-signature-description]');
-        const thumbnails = this.safeSelectAll('.signature-thumb');
+        const thumbnails = Array.from(this.safeSelectAll('.signature-thumb'));
 
         if (!mainImg || !description || thumbnails.length === 0) return;
 
         // 초기 활성 썸네일 설정
         thumbnails[0]?.classList.add('active');
 
-        // 썸네일 클릭 이벤트
+        // 썸네일 클릭 이벤트 (중복 등록 방지를 위해 cloneNode로 기존 리스너 제거)
         thumbnails.forEach((thumb, index) => {
             if (!selectedImages[index]) return;
 
-            thumb.addEventListener('click', () => {
+            const fresh = thumb.cloneNode(true);
+            thumb.parentNode.replaceChild(fresh, thumb);
+            thumbnails[index] = fresh;
+
+            fresh.addEventListener('click', () => {
                 // 모든 썸네일에서 active 클래스 제거
                 thumbnails.forEach(t => t.classList.remove('active'));
 
                 // 클릭된 썸네일에 active 클래스 추가
-                thumb.classList.add('active');
+                fresh.classList.add('active');
 
                 const imgData = selectedImages[index];
 
@@ -106,6 +116,33 @@ class IndexMapper extends BaseDataMapper {
                 }, 250);
             });
         });
+    }
+
+    // ============================================================================
+    // 🎥 VIDEO HELPERS
+    // ============================================================================
+
+    /**
+     * 비디오 엘리먼트 생성
+     */
+    _createVideoElement(url) {
+        const video = document.createElement('video');
+        video.src = url;
+        video.autoplay = true;
+        video.loop = true;
+        video.muted = true;
+        video.playsInline = true;
+        video.setAttribute('playsinline', '');
+        return video;
+    }
+
+    /**
+     * videos 배열에서 선택된 영상 URL 반환
+     */
+    _getSelectedVideo(videos) {
+        if (!videos || !Array.isArray(videos)) return null;
+        const selected = videos.find(v => v.isSelected === true);
+        return selected?.url || null;
     }
 
     // ============================================================================
@@ -138,10 +175,35 @@ class IndexMapper extends BaseDataMapper {
             heroDescElement.innerHTML = this._formatTextWithLineBreaks(heroData?.description, '메인 히어로 설명');
         }
 
-        // 히어로 슬라이더 이미지 매핑
-        if (heroData.images && Array.isArray(heroData.images)) {
-            this.mapHeroSlider(heroData.images);
+        const progressContainer = this.safeSelect('.hero-progress-container');
+
+        if (heroData.mediaType === 'video') {
+            if (progressContainer) progressContainer.style.display = 'none';
+            this.mapHeroVideo(heroData.videos);
+        } else {
+            if (progressContainer) progressContainer.style.display = '';
+            // 히어로 슬라이더 이미지 매핑
+            if (heroData.images && Array.isArray(heroData.images)) {
+                this.mapHeroSlider(heroData.images);
+            }
         }
+    }
+
+    /**
+     * Hero Video 매핑
+     */
+    mapHeroVideo(videos) {
+        const sliderContainer = this.safeSelect('[data-hero-slider]');
+        if (!sliderContainer) return;
+
+        sliderContainer.innerHTML = '';
+
+        const videoUrl = this._getSelectedVideo(videos);
+        if (!videoUrl) return;
+
+        const video = this._createVideoElement(videoUrl);
+        video.className = 'hero-video';
+        sliderContainer.appendChild(video);
     }
 
     /**
@@ -214,11 +276,27 @@ class IndexMapper extends BaseDataMapper {
             descElement.innerHTML = this._formatTextWithLineBreaks(essenceData?.description, '특징 섹션 설명');
         }
 
-        // Essence 이미지 매핑
         const essenceImg = this.safeSelect('[data-essence-img]');
-        if (essenceImg) {
-            if (typeof ImageHelpers !== 'undefined') {
-                ImageHelpers.applyImageOrPlaceholder(essenceImg, essenceData.images);
+        const essenceLeft = this.safeSelect('.essence-left');
+
+        if (essenceData.mediaType === 'video') {
+            if (essenceImg) essenceImg.style.display = 'none';
+            if (essenceLeft) {
+                essenceLeft.querySelectorAll('.essence-video').forEach(v => v.remove());
+                const videoUrl = this._getSelectedVideo(essenceData.videos);
+                if (videoUrl) {
+                    const video = this._createVideoElement(videoUrl);
+                    video.className = 'essence-video';
+                    essenceLeft.appendChild(video);
+                }
+            }
+        } else {
+            if (essenceLeft) essenceLeft.querySelectorAll('.essence-video').forEach(v => v.remove());
+            if (essenceImg) {
+                essenceImg.style.display = '';
+                if (typeof ImageHelpers !== 'undefined') {
+                    ImageHelpers.applyImageOrPlaceholder(essenceImg, essenceData.images);
+                }
             }
         }
     }
@@ -240,27 +318,73 @@ class IndexMapper extends BaseDataMapper {
             titleElement.textContent = this.sanitizeText(signatureData?.title, '시그니처 섹션 타이틀');
         }
 
-        // 메인 이미지 매핑
-        const mainImg = this.safeSelect('[data-signature-main-img]');
-        if (mainImg) {
-            if (typeof ImageHelpers !== 'undefined') ImageHelpers.applyImageOrPlaceholder(mainImg, signatureData.images);
-        }
-
-        // isSelected가 true인 이미지만 필터링하고 sortOrder로 정렬
-        const selectedImages = signatureData.images && Array.isArray(signatureData.images)
-            ? signatureData.images
-                .filter(img => img.isSelected === true)
-                .sort((a, b) => a.sortOrder - b.sortOrder)
-            : [];
-
-        // 설명 매핑 (signatureData.description 사용)
+        // 설명 매핑
         const descElement = this.safeSelect('[data-signature-description]');
         if (descElement) {
             descElement.innerHTML = this._formatTextWithLineBreaks(signatureData?.description, '특색 섹션 설명');
         }
 
-        // 썸네일 이미지들 매핑 (이미지 없어도 placeholder 적용 위해 항상 호출)
-        this.mapSignatureThumbnails(selectedImages.slice(0, 4));
+        if (signatureData.mediaType === 'video') {
+            this.mapSignatureVideo(signatureData.videos);
+        } else {
+            // 메인 이미지 복원
+            const mainImg = this.safeSelect('[data-signature-main-img]');
+            if (mainImg) {
+                mainImg.style.display = '';
+                if (typeof ImageHelpers !== 'undefined') ImageHelpers.applyImageOrPlaceholder(mainImg, signatureData.images);
+            }
+
+            // 썸네일 복원
+            const thumbnailsContainer = this.safeSelect('.signature-thumbnails');
+            if (thumbnailsContainer) thumbnailsContainer.style.display = '';
+
+            // 영상 정리 및 인라인 스타일 초기화 (CSS display:none 복원)
+            const signatureRight = this.safeSelect('.signature-right');
+            if (signatureRight) {
+                signatureRight.querySelectorAll('.signature-video').forEach(v => v.remove());
+                signatureRight.style.display = '';
+                signatureRight.style.width = '';
+                signatureRight.style.height = '';
+            }
+
+            // isSelected가 true인 이미지만 필터링하고 sortOrder로 정렬
+            const selectedImages = signatureData.images && Array.isArray(signatureData.images)
+                ? signatureData.images
+                    .filter(img => img.isSelected === true)
+                    .sort((a, b) => a.sortOrder - b.sortOrder)
+                : [];
+
+            // 썸네일 이미지들 매핑
+            this.mapSignatureThumbnails(selectedImages.slice(0, 4));
+        }
+    }
+
+    /**
+     * Signature Video 매핑
+     */
+    mapSignatureVideo(videos) {
+        const mainImg = this.safeSelect('[data-signature-main-img]');
+        if (mainImg) mainImg.style.display = 'none';
+
+        const thumbnailsContainer = this.safeSelect('.signature-thumbnails');
+        if (thumbnailsContainer) thumbnailsContainer.style.display = 'none';
+
+        const signatureRight = this.safeSelect('.signature-right');
+        if (!signatureRight) return;
+
+        // 모바일에서 display:none 처리된 signature-right를 영상 모드에서 강제 표시
+        signatureRight.style.display = 'block';
+        signatureRight.style.width = '100%';
+        signatureRight.style.height = '100vh';
+
+        signatureRight.querySelectorAll('.signature-video').forEach(v => v.remove());
+
+        const videoUrl = this._getSelectedVideo(videos);
+        if (!videoUrl) return;
+
+        const video = this._createVideoElement(videoUrl);
+        video.className = 'signature-video';
+        signatureRight.appendChild(video);
     }
 
     /**
@@ -311,6 +435,34 @@ class IndexMapper extends BaseDataMapper {
         // 갤러리 이미지 매핑
         const sliderContainer = this.safeSelect('[data-gallery-slider]');
         if (!sliderContainer) return;
+
+        const sliderWrapper = this.safeSelect('.gallery-slider-wrapper');
+
+        if (galleryData.mediaType === 'video') {
+            // 모바일 transform !important CSS 덮어쓰기 위해 setProperty 사용
+            if (sliderWrapper) {
+                sliderWrapper.style.setProperty('transform', 'none', 'important');
+                sliderWrapper.style.setProperty('height', '60vh', 'important');
+                sliderWrapper.style.setProperty('min-height', '300px', 'important');
+                sliderWrapper.style.setProperty('overflow', 'hidden', 'important');
+            }
+            sliderContainer.innerHTML = '';
+            const videoUrl = this._getSelectedVideo(galleryData.videos);
+            if (videoUrl) {
+                const video = this._createVideoElement(videoUrl);
+                video.className = 'gallery-video';
+                sliderContainer.appendChild(video);
+            }
+            return;
+        }
+
+        // 이미지 모드: 인라인 스타일 초기화
+        if (sliderWrapper) {
+            sliderWrapper.style.removeProperty('transform');
+            sliderWrapper.style.removeProperty('height');
+            sliderWrapper.style.removeProperty('min-height');
+            sliderWrapper.style.removeProperty('overflow');
+        }
 
         // ImageHelpers를 사용하여 선택된 이미지 필터링 및 정렬
         const selectedImages = ImageHelpers.getSelectedImages(galleryData.images);
@@ -388,10 +540,26 @@ class IndexMapper extends BaseDataMapper {
         const closingData = this.safeGet(this.data, 'homepage.customFields.pages.index.sections.0.closing');
         if (!closingData) return;
 
-        // 배경 이미지 매핑
         const bgImg = this.safeSelect('[data-closing-bg-img]');
-        if (bgImg) {
-            if (typeof ImageHelpers !== 'undefined') ImageHelpers.applyImageOrPlaceholder(bgImg, closingData.images);
+        const closingBg = this.safeSelect('.closing-background');
+
+        if (closingData.mediaType === 'video') {
+            if (bgImg) bgImg.style.display = 'none';
+            if (closingBg) {
+                closingBg.querySelectorAll('.closing-video').forEach(v => v.remove());
+                const videoUrl = this._getSelectedVideo(closingData.videos);
+                if (videoUrl) {
+                    const video = this._createVideoElement(videoUrl);
+                    video.className = 'closing-video';
+                    closingBg.appendChild(video);
+                }
+            }
+        } else {
+            if (closingBg) closingBg.querySelectorAll('.closing-video').forEach(v => v.remove());
+            if (bgImg) {
+                bgImg.style.display = '';
+                if (typeof ImageHelpers !== 'undefined') ImageHelpers.applyImageOrPlaceholder(bgImg, closingData.images);
+            }
         }
 
         // 설명 매핑

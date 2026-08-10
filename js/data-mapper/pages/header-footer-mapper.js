@@ -95,6 +95,9 @@ class HeaderFooterMapper extends BaseDataMapper {
         // 시설 메뉴 동적 생성
         this.mapFacilityMenuItems();
 
+        // 새 페이지 메뉴 enabled 체크
+        this.mapNewPageMenuVisibility();
+
         // 예약 버튼에 realtimeBookingId 매핑
         this.mapReservationButtons();
     }
@@ -637,6 +640,31 @@ class HeaderFooterMapper extends BaseDataMapper {
             this.mapHeader(),
             this.mapFooter()
         ]);
+    }
+
+    /**
+     * 새로운 페이지 메뉴 활성화/비활성화 제어
+     * nearby-attractions, layout-map의 enabled 값에 따라 메뉴 표시/숨김
+     */
+    mapNewPageMenuVisibility() {
+        if (!this.isDataLoaded) return;
+
+        const pages = this.safeGet(this.data, 'homepage.customFields.pages');
+        if (!pages) return;
+
+        // Nearby Attractions 메뉴 제어
+        const naEnabled = pages?.nearbyAttractions?.sections?.[0]?.enabled !== false;
+        const naMenu = document.querySelector('[data-nearby-attractions-menu]');
+        if (naMenu) {
+            naMenu.style.display = naEnabled ? '' : 'none';
+        }
+
+        // Layout Map 메뉴 제어
+        const lmEnabled = pages?.layoutMap?.sections?.[0]?.enabled !== false;
+        const lmMenu = document.querySelector('[data-layout-map-menu]');
+        if (lmMenu) {
+            lmMenu.style.display = lmEnabled ? '' : 'none';
+        }
     }
 
     /**

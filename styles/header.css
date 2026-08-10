@@ -278,8 +278,17 @@ body.dark-section-active .ybs-booking-btn {
 
 /* Menu Item */
 .menu-item {
-    cursor: pointer;
     transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu-item-title,
+.menu-item-list a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu-item-title {
+    cursor: pointer;
 }
 
 /* 아코디언 닫힌 상태 */
@@ -356,13 +365,15 @@ body.dark-section-active .ybs-booking-btn {
     white-space: nowrap; /* 텍스트 줄바꿈 방지 */
 }
 
-.menu-item:hover .menu-item-list a {
-    color: #333;
-}
+@media (hover: hover) and (pointer: fine) {
+    .menu-item:hover .menu-item-list a {
+        color: #333;
+    }
 
-.menu-item-list a:hover {
-    color: #000;
-    transform: translateX(5px);
+    .menu-item-list a:hover {
+        color: #000;
+        transform: translateX(5px);
+    }
 }
 
 
@@ -382,8 +393,10 @@ body.dark-section-active .ybs-booking-btn {
     transition: transform 0.5s ease;
 }
 
-.menu-item:hover ~ .menu-right-section .menu-image-container img {
-    transform: scale(1.05);
+@media (hover: hover) and (pointer: fine) {
+    .menu-item:hover ~ .menu-right-section .menu-image-container img {
+        transform: scale(1.05);
+    }
 }
 
 /* Custom scrollbar for menu-left-section */
@@ -481,9 +494,12 @@ body.dark-section-active .ybs-booking-btn {
 
     .menu-left-section {
         width: 100%;
-        padding: 100px 30px 30px 20px;
+        padding: 100px 30px 120px 20px; /* 하단 예약 버튼 공간 확보 */
         height: 100vh;
+        height: 100dvh; /* iOS 주소창 고려한 실제 viewport 높이 */
+        display: block; /* desktop flex 리셋 — overflow 스크롤 계산 정상화 */
         overflow-y: auto;
+        overscroll-behavior: contain; /* 메뉴 스크롤이 배경 페이지로 전파되지 않음 */
         -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 지원 */
     }
     

@@ -325,25 +325,30 @@ class RoomMapper extends BaseDataMapper {
             roomCapacity.textContent = capacity;
         }
 
-        // 체크인 (시스템 데이터)
+        // 체크인 (객실 단위 timeSettings 우선)
         const roomCheckin = this.safeSelect('[data-room-checkin]');
         if (roomCheckin) {
-            const checkinTime = this.data.property?.checkinTime || '15:00';
-            roomCheckin.textContent = checkinTime;
+            roomCheckin.textContent = room.timeSettings?.checkin || '-';
         }
 
-        // 체크아웃 (시스템 데이터)
+        // 체크아웃 (객실 단위 timeSettings 우선)
         const roomCheckout = this.safeSelect('[data-room-checkout]');
         if (roomCheckout) {
-            const checkoutTime = this.data.property?.checkoutTime || '11:00';
-            roomCheckout.textContent = checkoutTime;
+            roomCheckout.textContent = room.timeSettings?.checkout || '-';
         }
 
-        // 객실 이용규칙/안내사항 (시스템 데이터)
+        // 객실 이용규칙/안내사항 (시스템 데이터) — 내용 없으면 Room Information 섹션(제목 포함) 미노출
         const roomGuide = this.safeSelect('[data-room-guide]');
         if (roomGuide) {
-            const roomInfo = room.roomInfo || '편안한 휴식 공간';
-            roomGuide.innerHTML = this._formatTextWithLineBreaks(roomInfo);
+            const roomInfo = (room.roomInfo || '').trim();
+            const guideSection = roomGuide.closest('[data-room-usage-guide]');
+            if (roomInfo) {
+                roomGuide.innerHTML = this._formatTextWithLineBreaks(roomInfo);
+                if (guideSection) guideSection.style.display = '';
+            } else {
+                roomGuide.innerHTML = '';
+                if (guideSection) guideSection.style.display = 'none';
+            }
         }
     }
 

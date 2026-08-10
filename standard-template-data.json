@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.36.0",
-    "generatedAt": "2026-08-10T07:39:51.812999089Z",
+    "version": "1.37.0",
+    "generatedAt": "2026-08-10T07:40:18.730084808Z",
     "templateType": "fullpage_scroll",
     "propertyId": "a0c6c135-924b-4627-bc31-303bbded79a2",
     "homepageId": "5c3c5977-6247-4e43-a07f-c82001f9553f"
@@ -9,6 +9,7 @@
   "property": {
     "id": "a0c6c135-924b-4627-bc31-303bbded79a2",
     "name": "속초 더블유 스파 풀빌라",
+    "nameEn": "Sokcho  W Spa PoolVilla",
     "description": "동해 오션뷰를 보며 스파, 풀빌라를 즐길 수 있는 더블유 스파풀빌라입니다.",
     "subtitle": "",
     "address": "강원특별자치도 속초시 영랑해안길 183 (영랑동) 더블유",
@@ -23,6 +24,9 @@
     "reservationGuide": "※ 전객실 호텔식 침구류 제공\n※ A동은 반려견 동반 불가,B동만 반려견 동반 가능\n※ 비대면 입실로 추가요금(인원추가,반려견 동반,바베큐,미온수 등)은 입실 전 사전 결제 안내\n※ 객실 내 튀김류,생선류 조리 금지,개인 취사도구 반입 금지\n※ 펜션의 객실요금은 각 객실의 기준인원이 이용할 수 있는 요금으로 기준인원이 넘어가는 추가인원에 대한 비용은 별도 지불 필요\n※ 예약 인원에서 인원이 추가되는 경우 펜션에 미리 연락 필요\n※ 전객실 금연",
     "province": "강원특별자치도",
     "city": "속초시",
+    "domain": "wpoolvilla.kr",
+    "realtimeBookingId": "https://map.naver.com/p/entry/place/1971147527",
+    "ybsId": "",
     "amenities": [
       "엘리베이터",
       "흡연구역(지정장소)",
@@ -48,8 +52,7 @@
       "businessEmail": "",
       "businessType": "corporate",
       "businessCategory": "숙박업",
-      "eCommerceRegistrationNumber": "",
-      "ecommerceRegistrationNumber": ""
+      "eCommerceRegistrationNumber": ""
     },
     "contractInfo": {
       "contractStartDate": "2025-09-10T00:00:00.000Z",
@@ -477,11 +480,7 @@
         "surrounding": [ ],
         "commonArea": [ ]
       }
-    ],
-    "nameEn": "Sokcho  W Spa PoolVilla",
-    "domain": "wpoolvilla.kr",
-    "realtimeBookingId": "https://map.naver.com/p/entry/place/1971147527",
-    "ybsId": ""
+    ]
   },
   "rooms": [
     {
@@ -3593,6 +3592,7 @@
     }
   ],
   "homepage": {
+    "id": "5c3c5977-6247-4e43-a07f-c82001f9553f",
     "domain": "wpoolvilla.kr",
     "templateType": "fullpage_scroll",
     "images": [
@@ -4128,10 +4128,55 @@
               }
             }
           ]
+        },
+        "nearbyAttractions": {
+          "sections": [
+            {
+              "enabled": false,
+              "hero": {
+                "title": "주변관광지 히어로 타이틀",
+                "description": "주변관광지 히어로 설명",
+                "images": [ ]
+              },
+              "about": [
+                {
+                  "title": "주변관광지 소개 섹션 타이틀",
+                  "description": "주변관광지 소개 섹션 설명",
+                  "images": [ ]
+                }
+              ]
+            }
+          ]
+        },
+        "layoutMap": {
+          "sections": [
+            {
+              "enabled": false,
+              "hero": {
+                "title": "배치도 히어로 타이틀",
+                "description": "배치도 히어로 설명",
+                "images": [ ]
+              },
+              "about": {
+                "title": "배치도 소개 타이틀",
+                "description": "배치도 소개 설명",
+                "images": [ ]
+              }
+            }
+          ]
         }
+      },
+      "popup": {
+        "popups": [ ]
       },
       "theme": {
         "font": {
+          "koMain": {
+            "cdn": "https://fonts.cdnfonts.com/css/noto-serif-kr",
+            "key": "notoserifKR",
+            "woff2": null,
+            "family": "Noto Serif KR"
+          },
           "koSub": {
             "cdn": "https://fonts.cdnfonts.com/css/noto-serif-kr",
             "key": "notoserifKR",
@@ -4143,12 +4188,6 @@
             "key": "ooohbaby",
             "woff2": null,
             "family": "Oooh Baby"
-          },
-          "koMain": {
-            "cdn": "https://fonts.cdnfonts.com/css/noto-serif-kr",
-            "key": "notoserifKR",
-            "woff2": null,
-            "family": "Noto Serif KR"
           }
         },
         "color": {
@@ -4156,10 +4195,8 @@
           "secondary": "#577185"
         }
       },
-      "popup": {
-        "popups": [ ]
-      },
       "property": {
+        "name": "속초 더블유 스파 풀빌라",
         "images": [
           {
             "id": "80c896f8-cb7c-4533-97ef-0867c9645163",
@@ -4306,7 +4343,6 @@
             "category": "property_exterior"
           }
         ],
-        "name": "속초 더블유 스파 풀빌라",
         "nameEn": "Sokcho  W Spa PoolVilla"
       },
       "roomtypes": [
@@ -5454,7 +5490,6 @@
           ]
         }
       ]
-    },
-    "id": "5c3c5977-6247-4e43-a07f-c82001f9553f"
+    }
   }
 }
