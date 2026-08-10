@@ -561,6 +561,7 @@
     }
 
     .facility-gallery-container .gallery-item {
+        flex: 0 0 auto;   /* 모바일은 1열 스택이므로 균등분배 해제 */
         width: 100%;
         max-width: 350px;
         height: 350px;

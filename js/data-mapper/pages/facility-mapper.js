@@ -354,7 +354,9 @@ class FacilityMapper extends BaseDataMapper {
     }
 
     /**
-     * 갤러리 매핑 (facility.images 4장 동적 생성)
+     * 갤러리 매핑 (facility.images 최대 3장, 있는 만큼만 동적 생성)
+     * - 이미지 1~3개: 개수만큼 생성 (가로폭은 CSS flex로 균등 분배)
+     * - 이미지 0개: #GALLERY 섹션 전체 숨김
      */
     mapGallery() {
         const facility = this.getCurrentFacility();
@@ -363,9 +365,11 @@ class FacilityMapper extends BaseDataMapper {
         const galleryContainer = this.safeSelect('[data-facility-gallery]');
         if (!galleryContainer) return;
 
+        const gallerySection = galleryContainer.closest('.facility-gallery-section');
+
         // 갤러리 상수 정의
         const HERO_IMAGES_COUNT = 2; // Hero/Thumbnail에서 사용하는 이미지 수
-        const GALLERY_IMAGES_COUNT = 3; // 갤러리에 표시할 이미지 수
+        const GALLERY_IMAGES_COUNT = 3; // 갤러리에 표시할 최대 이미지 수
 
         // ImageHelpers로 선택된 이미지 가져오기
         const selectedImages = ImageHelpers.getSelectedImages(facility.images);
@@ -376,49 +380,51 @@ class FacilityMapper extends BaseDataMapper {
         // 갤러리용 이미지 (Hero/Thumbnail 이후 이미지들)
         const galleryImages = selectedImages.slice(HERO_IMAGES_COUNT, HERO_IMAGES_COUNT + GALLERY_IMAGES_COUNT);
 
+        // 이미지가 없으면 갤러리 섹션 자체를 숨김
         if (galleryImages.length === 0) {
-            // 이미지가 없으면 placeholder로 채움
-            for (let i = 0; i < GALLERY_IMAGES_COUNT; i++) {
-                const item = this._createGalleryItem(null, facility.name);
-                galleryContainer.appendChild(item);
-            }
+            if (gallerySection) gallerySection.style.display = 'none';
+            galleryContainer.removeAttribute('data-gallery-count');
             return;
         }
 
-        // 갤러리 아이템 생성
+        if (gallerySection) gallerySection.style.display = '';
+
+        // 개수를 속성으로 노출 (CSS에서 레이아웃 분기 시 활용)
+        galleryContainer.setAttribute('data-gallery-count', String(galleryImages.length));
+
+        // 갤러리 아이템 생성 (있는 만큼만, placeholder 채움 없음)
         galleryImages.forEach(image => {
             const item = this._createGalleryItem(image, facility.name);
             galleryContainer.appendChild(item);
         });
-
-        // 부족한 이미지를 placeholder로 채움
-        for (let i = galleryImages.length; i < GALLERY_IMAGES_COUNT; i++) {
-            const item = this._createGalleryItem(null, facility.name);
-            galleryContainer.appendChild(item);
-        }
     }
 
     /**
      * 갤러리 아이템 생성 헬퍼
+     * - image.description이 비어있으면 제목(#) 자체를 생성하지 않음
      */
     _createGalleryItem(image, facilityName) {
         const item = document.createElement('div');
         item.className = 'gallery-item animate-element';
 
-        const title = document.createElement('h3');
-        title.className = 'gallery-item-title';
-        title.textContent = image ? this.sanitizeText(image.description, '이미지 설명') : '이미지 설명';
+        // 이미지 설명 (빈 값이면 미노출)
+        const description = image ? this.sanitizeText(image.description) : '';
+        if (description) {
+            const title = document.createElement('h3');
+            title.className = 'gallery-item-title';
+            title.textContent = description;
+            item.appendChild(title);
+        }
 
         const img = document.createElement('img');
         if (image && image.url) {
             img.src = image.url;
-            img.alt = image.description || facilityName;
+            img.alt = description || facilityName;
             img.classList.remove('empty-image-placeholder');
         } else {
             ImageHelpers.applyPlaceholder(img);
         }
 
-        item.appendChild(title);
         item.appendChild(img);
 
         return item;
