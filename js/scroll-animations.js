@@ -25,7 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
         '.facility-additional-section',
         '.facility-info-card',
         '.facility-gallery-label',  // facility 갤러리 라벨
-        '.gallery-item'
+        '.gallery-item',
+        '.nearby-title',  // nearby-attractions 페이지
+        '.nearby-description',
+        '.attraction-block',
+        '.layout-map-title',  // layout-map 페이지
+        '.layout-map-description',
+        '.layout-map-image-item',
+        '.full-banner-title',
+        '.full-banner-circle',
     ];
 
     // IntersectionObserver 설정

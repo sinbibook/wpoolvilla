@@ -2,21 +2,26 @@
 (function() {
     'use strict';
 
-    // Scroll Effect for Transparent Header
+    // Scroll Effect for Transparent Header (rAF-throttled)
+    let headerScrollTicking = false;
     window.addEventListener('scroll', function() {
-        const header = document.querySelector('.transparent-header');
-        const body = document.body;
-
-        if (header) {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-                body.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-                body.classList.remove('scrolled');
+        if (headerScrollTicking) return;
+        headerScrollTicking = true;
+        requestAnimationFrame(function() {
+            const header = document.querySelector('.transparent-header');
+            const body = document.body;
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                    body.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                    body.classList.remove('scrolled');
+                }
             }
-        }
-    });
+            headerScrollTicking = false;
+        });
+    }, { passive: true });
 
     // Toggle Menu Overlay
     window.toggleMenuOverlay = function() {

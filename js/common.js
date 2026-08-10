@@ -15,17 +15,24 @@
         }, 100);
     }
 
-    // Also trigger animations on scroll for better UX
+    // Also trigger animations on scroll for better UX (rAF-throttled to avoid scroll jank on mobile)
+    let scrollTicking = false;
     function handleScrollAnimations() {
-        const fadeElements = document.querySelectorAll('.main-content-fade-in:not(.animate)');
-
-        fadeElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 100;
-
-            if (elementTop < window.innerHeight - elementVisible) {
-                element.classList.add('animate');
+        if (scrollTicking) return;
+        scrollTicking = true;
+        requestAnimationFrame(() => {
+            const fadeElements = document.querySelectorAll('.main-content-fade-in:not(.animate)');
+            if (fadeElements.length === 0) {
+                scrollTicking = false;
+                return;
             }
+            const viewportCutoff = window.innerHeight - 100;
+            fadeElements.forEach(element => {
+                if (element.getBoundingClientRect().top < viewportCutoff) {
+                    element.classList.add('animate');
+                }
+            });
+            scrollTicking = false;
         });
     }
 

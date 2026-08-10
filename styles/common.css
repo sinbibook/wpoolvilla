@@ -810,6 +810,26 @@ body.footer-visible .floating-btn:hover {
     border-color: var(--color-primary) !important;
 }
 
+/* Menu open state - floating buttons remain visible above overlay */
+body.menu-open .floating-buttons {
+    z-index: 10000; /* .menu-overlay(9999) 위로 올림 */
+}
+
+body.menu-open .floating-btn {
+    background: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    color: var(--color-primary) !important;
+}
+
+body.menu-open .floating-btn::before {
+    background: var(--color-primary) !important;
+}
+
+body.menu-open .floating-btn:hover {
+    color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+}
+
 .floating-btn .booking-icon {
     display: none;
 }
@@ -1001,15 +1021,21 @@ body.dark-section-active.scrolled:not(.footer-visible) .scroll-to-top:hover {
         align-items: center;
     }
 
-    /* 예약하기 버튼 - 달력 아이콘만 표시 */
+    /* 예약하기 버튼 - 텍스트 표시 (아이콘 숨김) */
+    .booking-btn {
+        width: auto;
+        padding: 0 16px;
+    }
+
     .booking-btn span {
-        display: none;
+        display: inline;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
     }
 
     .booking-btn .booking-calendar-icon {
-        display: block !important;
-        width: 20px;
-        height: 20px;
+        display: none !important;
     }
 
     /* YBS 버튼 - Y만 표시 */
