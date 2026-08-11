@@ -105,6 +105,10 @@ img {
     object-fit: cover;
     transform: scale(1);
     transition: transform 3s ease-out;
+    /* 줌 시작 순간 레이어 승격으로 한 프레임 튀는 현상 방지 (미리 합성 레이어로 올림) */
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-origin: center center;
 }
 
 /* Hero Overlay */

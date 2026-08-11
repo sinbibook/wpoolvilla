@@ -5,7 +5,8 @@
 
 // 전역 변수로 interval 관리
 window._roomHeroInterval = null;
-let isTransitioning = false;
+// 재초기화 세대 카운터 — 이전 초기화의 타이머/콜백이 새 슬라이더를 건드리지 못하게 함
+window._roomHeroGen = 0;
 
 window.initRoomHeroSlider = function initHeroSlider() {
     // 기존 interval 정리
@@ -14,6 +15,10 @@ window.initRoomHeroSlider = function initHeroSlider() {
         window._roomHeroInterval = null;
     }
 
+    // 이번 초기화의 세대 번호 (이 값이 바뀌면 아래 콜백들은 모두 무효)
+    const generation = ++window._roomHeroGen;
+    const isStale = () => generation !== window._roomHeroGen;
+
     const slider = document.querySelector('[data-hero-slider]');
     if (!slider) return;
 
@@ -21,11 +26,23 @@ window.initRoomHeroSlider = function initHeroSlider() {
     const currentSlideEl = document.querySelector('[data-current-slide]');
     const totalSlidesEl = document.querySelector('[data-total-slides]');
     const progressBar = document.querySelector('[data-hero-progress]');
-    const prevBtn = document.querySelector('.hero-nav-prev');
-    const nextBtn = document.querySelector('.hero-nav-next');
+
+    // 네비게이션 버튼은 정적 요소라 재초기화 시 이전 리스너가 쌓인다.
+    // 복제로 교체해서 기존 리스너를 모두 제거한 뒤 새로 바인딩한다.
+    const replaceWithClone = (selector) => {
+        const el = document.querySelector(selector);
+        if (!el) return null;
+        const fresh = el.cloneNode(true);
+        el.parentNode.replaceChild(fresh, el);
+        return fresh;
+    };
+
+    const prevBtn = replaceWithClone('.hero-nav-prev');
+    const nextBtn = replaceWithClone('.hero-nav-next');
 
     const SLIDE_DURATION = 3000; // 3초
     let currentIndex = 0;
+    let isTransitioning = false; // 초기화마다 독립 (이전 슬라이더가 잠그지 못하도록)
 
     // 슬라이드가 없거나 1개만 있으면 중지
     if (slides.length <= 1) {
@@ -44,7 +61,7 @@ window.initRoomHeroSlider = function initHeroSlider() {
 
     // 슬라이드 전환 함수
     function goToSlide(index) {
-        if (isTransitioning) return;
+        if (isTransitioning || isStale()) return;
         isTransitioning = true;
 
         // 이전 슬라이드 비활성화
@@ -64,12 +81,22 @@ window.initRoomHeroSlider = function initHeroSlider() {
             newImg.style.transform = 'scale(1)';
 
             // 다음 프레임에서 트랜지션 복원 및 줌인
-            requestAnimationFrame(() => {
-                newImg.style.transition = 'transform 3s ease-out';
+            const startZoom = () => {
                 requestAnimationFrame(() => {
-                    newImg.style.transform = 'scale(1.12)';
+                    newImg.style.transition = 'transform 3s ease-out';
+                    requestAnimationFrame(() => {
+                        newImg.style.transform = 'scale(1.12)';
+                    });
                 });
-            });
+            };
+
+            // 이미지가 아직 로드 전이면 로드 후에 줌 시작
+            // (그리기 전에 줌이 진행되면 이미지가 나타나는 순간 튀어 보임)
+            if (newImg.complete && newImg.naturalWidth > 0) {
+                startZoom();
+            } else {
+                newImg.addEventListener('load', startZoom, { once: true });
+            }
         }
 
         // 이전 슬라이드 줌 리셋 (다음 사용을 위해)
@@ -131,6 +158,7 @@ window.initRoomHeroSlider = function initHeroSlider() {
 
     // 자동 재생 시작
     function startAutoPlay() {
+        if (isStale()) return; // 이미 재초기화된 슬라이더면 무시
         stopAutoPlay(); // 기존 인터벌 정리
         window._roomHeroInterval = setInterval(nextSlide, SLIDE_DURATION);
     }

@@ -21,11 +21,9 @@ class HeroSlider {
         this.loadSlides();
 
         // 슬라이드가 1개 이하면 자동슬라이드 비활성화
+        // (줌인은 loadSlides()에서 이미 시작했으므로 다시 호출하지 않음 — 중복 호출 시 되감김 발생)
         if (this.totalSlides <= 1) {
             this.updateIndicators();
-            if (this.slides[0]) {
-                this.startZoomAnimation(this.slides[0]);
-            }
             return;
         }
 
@@ -46,16 +44,27 @@ class HeroSlider {
 
     startZoomAnimation(slide) {
         const img = slide.querySelector('img');
-        if (img) {
-            // 줌 아웃 상태로 초기화
-            img.style.transform = 'scale(1)';
-            img.style.transition = 'none';
+        if (!img) return;
 
-            // 약간의 지연 후 줌인 시작
-            setTimeout(() => {
+        // 줌 아웃 상태로 초기화 (트랜지션을 먼저 끊고 위치를 잡아야 되감기가 안 보임)
+        img.style.transition = 'none';
+        img.style.transform = 'scale(1)';
+
+        const startZoom = () => {
+            // 다음 프레임에서 트랜지션 복원 → 그 다음 프레임에서 줌인 시작
+            requestAnimationFrame(() => {
                 img.style.transition = `transform ${this.slideDuration}ms ease-out`;
-                img.style.transform = 'scale(1.15)';
-            }, 100);
+                requestAnimationFrame(() => {
+                    img.style.transform = 'scale(1.15)';
+                });
+            });
+        };
+
+        // 이미지가 아직 로드 전이면 로드 후에 줌 시작 (그리기 전에 애니메이션이 진행되는 것 방지)
+        if (img.complete && img.naturalWidth > 0) {
+            startZoom();
+        } else {
+            img.addEventListener('load', startZoom, { once: true });
         }
     }
 
@@ -131,13 +140,21 @@ class GallerySlider {
         this.slider = null;
         this.index = 0;
         this.intervalId = null;
-        this.isPaused = false;
         this.slideDuration = 3000; // 3초마다 슬라이드
         this.slideCount = 0;
 
         // 상수 정의
         this.SLIDE_GAP = 30;           // 슬라이드 간 간격 (px)
-        this.INITIAL_DELAY = 2000;     // 초기 자동 슬라이드 지연 시간 (ms)
+        this.TRANSITION = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        this.DRAG_THRESHOLD = 5;       // 클릭과 드래그를 구분하는 이동량 (px)
+
+        // 드래그 상태
+        this.isDragging = false;
+        this.dragStartX = 0;
+        this.dragDelta = 0;
+        this.dragMoved = false;
+        this.pointerId = null;
+        this.dragHandlers = null;
     }
 
     init() {
@@ -211,60 +228,172 @@ class GallerySlider {
     }
 
     startSlider() {
-        // 슬라이더 초기 위치 설정 (버퍼 고려)
+        // 시작 위치를 두 번째 세트로 보정 (왼쪽으로 드래그할 공간 확보)
+        this.syncWrap();
+        this.applyTransform(false);
+
+        // 드래그 스크롤 활성화
+        this.enableDrag();
+
+        // 자동 슬라이드 활성화 (지연 없이 바로 시작)
+        this.intervalId = setInterval(() => {
+            if (!this.isDragging) {
+                this.move();
+            }
+        }, this.slideDuration);
+    }
+
+    /**
+     * 아이템 1개 이동 거리 (너비 + gap)
+     */
+    getItemWidth() {
         const firstItem = this.slider.querySelector('.gallery-item');
-        if (firstItem) {
-            const itemWidth = firstItem.offsetWidth + this.SLIDE_GAP;
-            this.slider.style.transform = `translateX(-${this.index * itemWidth}px)`;
-        }
+        if (!firstItem) return 0;
+        return firstItem.offsetWidth + this.SLIDE_GAP;
+    }
 
-        // 호버 이벤트
-        this.slider.addEventListener('mouseenter', () => {
-            this.isPaused = true;
-        });
+    /**
+     * 현재 index 기준 위치 적용
+     * @param {boolean} animate - 애니메이션 여부
+     * @param {number} offset - 드래그 중 추가 이동량 (px)
+     */
+    applyTransform(animate, offset = 0) {
+        const itemWidth = this.getItemWidth();
+        this.slider.style.transition = animate ? this.TRANSITION : 'none';
+        this.slider.style.transform = `translateX(${-this.index * itemWidth + offset}px)`;
+    }
 
-        this.slider.addEventListener('mouseleave', () => {
-            this.isPaused = false;
-        });
+    /**
+     * index를 [slideCount, slideCount*2) 범위로 보정
+     * 모든 세트가 동일한 이미지라 위치를 즉시 옮겨도 시각적으로 동일 (무한 루프)
+     * @returns {boolean} 보정이 일어났으면 true
+     */
+    syncWrap() {
+        const n = this.slideCount;
+        if (n <= 0) return false;
 
-        // 자동 슬라이드 활성화
-        setTimeout(() => {
-            this.intervalId = setInterval(() => {
-                if (!this.isPaused) {
-                    this.move();
-                }
-            }, this.slideDuration);
-        }, this.INITIAL_DELAY);
+        let wrapped = false;
+        while (this.index >= n * 2) { this.index -= n; wrapped = true; }
+        while (this.index < n) { this.index += n; wrapped = true; }
+        return wrapped;
     }
 
     move() {
-        // 이미지 너비 계산 (첫 번째 아이템 기준)
-        const firstItem = this.slider.querySelector('.gallery-item');
-        if (!firstItem) return;
+        if (!this.getItemWidth()) return;
 
-        const itemWidth = firstItem.offsetWidth + this.SLIDE_GAP; // gap 포함
-
-        // 2세트를 지나면 리셋 (자연스러운 무한 루프)
-        if (this.index >= this.slideCount * 2) {
-            // 즉시 리셋 (애니메이션 없이)
-            this.slider.style.transition = 'none';
-            this.index = 0;
-            this.slider.style.transform = `translateX(0px)`;
-
-            // 리플로우 후 애니메이션 재적용
-            void this.slider.offsetWidth;
-            this.slider.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        // 애니메이션 시작 전에 위치 보정 (보정 시점에는 화면이 동일해서 티가 나지 않음)
+        if (this.syncWrap()) {
+            this.applyTransform(false);
+            void this.slider.offsetWidth; // 리플로우
         }
 
         this.index += 1;
-        const moveDistance = this.index * itemWidth;
-        this.slider.style.transform = `translateX(-${moveDistance}px)`;
+        this.applyTransform(true);
+    }
+
+    // ========================================================================
+    // 🖱️ 드래그 스크롤
+    // ========================================================================
+    enableDrag() {
+        this.slider.style.cursor = 'grab';
+        this.slider.style.touchAction = 'pan-y'; // 세로 스크롤은 그대로 두고 가로만 처리
+
+        const onPointerDown = (e) => {
+            if (e.pointerType === 'mouse' && e.button !== 0) return;
+            if (!this.getItemWidth()) return;
+
+            // 드래그 시작 전 위치 보정 (양쪽으로 이동할 여유 확보)
+            if (this.syncWrap()) this.applyTransform(false);
+
+            this.isDragging = true;
+            this.dragMoved = false;
+            this.dragStartX = e.clientX;
+            this.dragDelta = 0;
+            this.pointerId = e.pointerId;
+
+            this.slider.style.cursor = 'grabbing';
+            this.slider.style.userSelect = 'none';
+            this.slider.style.transition = 'none';
+
+            if (this.slider.setPointerCapture) {
+                this.slider.setPointerCapture(e.pointerId);
+            }
+        };
+
+        const onPointerMove = (e) => {
+            if (!this.isDragging || e.pointerId !== this.pointerId) return;
+
+            const itemWidth = this.getItemWidth();
+            const maxDrag = itemWidth * this.slideCount; // 한 번에 최대 한 세트까지만
+
+            this.dragDelta = Math.max(-maxDrag, Math.min(maxDrag, e.clientX - this.dragStartX));
+            if (Math.abs(this.dragDelta) > this.DRAG_THRESHOLD) this.dragMoved = true;
+
+            this.applyTransform(false, this.dragDelta);
+        };
+
+        const onPointerUp = (e) => {
+            if (!this.isDragging || e.pointerId !== this.pointerId) return;
+
+            this.isDragging = false;
+            this.pointerId = null;
+            this.slider.style.cursor = 'grab';
+            this.slider.style.userSelect = '';
+
+            if (this.slider.releasePointerCapture && this.slider.hasPointerCapture?.(e.pointerId)) {
+                this.slider.releasePointerCapture(e.pointerId);
+            }
+
+            // 가장 가까운 슬라이드로 스냅
+            const itemWidth = this.getItemWidth();
+            if (itemWidth) {
+                this.index += Math.round(-this.dragDelta / itemWidth);
+            }
+            this.dragDelta = 0;
+            this.applyTransform(true);
+        };
+
+        // 드래그로 끝난 제스처는 클릭으로 처리하지 않음
+        const onClick = (e) => {
+            if (this.dragMoved) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.dragMoved = false;
+            }
+        };
+
+        // 이미지 기본 드래그(고스트 이미지) 방지
+        const onDragStart = (e) => e.preventDefault();
+
+        this.dragHandlers = { onPointerDown, onPointerMove, onPointerUp, onClick, onDragStart };
+
+        this.slider.addEventListener('pointerdown', onPointerDown);
+        this.slider.addEventListener('pointermove', onPointerMove);
+        this.slider.addEventListener('pointerup', onPointerUp);
+        this.slider.addEventListener('pointercancel', onPointerUp);
+        this.slider.addEventListener('click', onClick, true);
+        this.slider.addEventListener('dragstart', onDragStart);
+    }
+
+    disableDrag() {
+        if (!this.slider || !this.dragHandlers) return;
+
+        const h = this.dragHandlers;
+        this.slider.removeEventListener('pointerdown', h.onPointerDown);
+        this.slider.removeEventListener('pointermove', h.onPointerMove);
+        this.slider.removeEventListener('pointerup', h.onPointerUp);
+        this.slider.removeEventListener('pointercancel', h.onPointerUp);
+        this.slider.removeEventListener('click', h.onClick, true);
+        this.slider.removeEventListener('dragstart', h.onDragStart);
+        this.dragHandlers = null;
     }
 
     stop() {
         if (this.intervalId) {
             clearInterval(this.intervalId);
+            this.intervalId = null;
         }
+        this.disableDrag();
     }
 }
 
@@ -326,6 +455,15 @@ class FullpageScroll {
         this.updateActiveSection();
     }
 
+    /**
+     * 섹션 목록 갱신 (모바일 ↔ 데스크톱 폭 전환 후 fp-section이 다시 붙었을 때)
+     */
+    refresh() {
+        this.sections = document.querySelectorAll('.fp-section');
+        this.isScrolling = false;
+        this.updateActiveSection();
+    }
+
     initNavigation() {
         const navLinks = document.querySelectorAll('.fp-nav a');
         navLinks.forEach((link, index) => {
@@ -349,6 +487,12 @@ class FullpageScroll {
 
     initWheelListener() {
         window.addEventListener('wheel', (e) => {
+            // 모바일 폭에서는 풀페이지 스크롤을 쓰지 않음 (창 크기 변경/디바이스 모드 대응)
+            if (window.innerWidth <= 768) return;
+
+            // 메뉴 오버레이가 열려 있으면 풀페이지 스크롤을 막고 메뉴 내부 스크롤 허용
+            if (document.querySelector('.menu-overlay.active')) return;
+
             if (this.isScrolling) {
                 e.preventDefault();
                 return;
@@ -385,6 +529,9 @@ class FullpageScroll {
         }, { passive: true });
 
         window.addEventListener('touchend', (e) => {
+            // 모바일 폭에서는 스와이프를 가로채지 않고 일반 스크롤 사용
+            if (window.innerWidth <= 768) return;
+            if (document.querySelector('.menu-overlay.active')) return;
             if (this.isScrolling) return;
 
             const touchEndY = e.changedTouches[0].clientY;
@@ -649,6 +796,32 @@ function enableMobileScroll() {
     }
 }
 
+// 데스크톱 레이아웃 복원 (모바일 폭 → 데스크톱 폭으로 되돌아올 때)
+function restoreDesktopScroll() {
+    document.documentElement.style.removeProperty('overflow');
+    document.documentElement.style.removeProperty('height');
+    document.body.style.removeProperty('overflow');
+    document.body.style.removeProperty('height');
+
+    const fullpage = document.getElementById('fullpage');
+    if (fullpage) {
+        fullpage.style.removeProperty('height');
+        fullpage.style.removeProperty('overflow');
+    }
+
+    // 섹션 인라인 높이 제거 + fp-section 클래스 복구
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.removeProperty('height');
+        section.style.removeProperty('min-height');
+        section.classList.add('fp-section');
+    });
+
+    const fpNav = document.querySelector('.fp-nav');
+    if (fpNav) {
+        fpNav.style.removeProperty('display');
+    }
+}
+
 // 전역 초기화 함수 (mapper에서 호출 가능)
 let heroSliderInstance = null;
 let gallerySliderInstance = null;
@@ -691,6 +864,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 스크롤 감지 초기화
     initScrollDetection();
+
+    // 폭이 모바일/데스크톱 경계를 넘나들 때 레이아웃 전환
+    // (기기 회전, 창 크기 변경, 개발자도구 디바이스 모드 — 새로고침 없이 전환됨)
+    let isMobileLayout = window.innerWidth <= 768;
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const nowMobile = window.innerWidth <= 768;
+            if (nowMobile === isMobileLayout) return;
+            isMobileLayout = nowMobile;
+
+            if (nowMobile) {
+                // 풀페이지 스크롤 해제 → 일반 스크롤
+                enableMobileScroll();
+            } else {
+                // 일반 스크롤 → 풀페이지 스크롤 복원
+                restoreDesktopScroll();
+                if (fullpageScroll) {
+                    fullpageScroll.refresh();
+                } else {
+                    fullpageScroll = new FullpageScroll();
+                }
+            }
+        }, 150);
+    });
 
     // 모바일에서 일반 스크롤 활성화
     if (window.innerWidth <= 768) {
