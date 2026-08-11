@@ -103,7 +103,8 @@ body {
         overflow-x: hidden !important; /* fallback */
         overflow-x: clip !important;
         height: auto !important;
-        overscroll-behavior-y: none;
+        /* overscroll-behavior-y: none 제거 —
+           body에 걸면 뷰포트로 전파되면서 세로 스크롤 자체가 동작하지 않는 문제 발생 */
     }
 
     /* 모바일에서는 fp-nav 보정 제거 */

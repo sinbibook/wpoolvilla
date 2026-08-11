@@ -6,6 +6,8 @@
 class HeaderFooterMapper extends BaseDataMapper {
     constructor() {
         super();
+        // 페이지 본문 매퍼가 아님 → __pageSelfMapped 플래그를 세우지 않음
+        this.isPageMapper = false;
     }
 
     // ============================================================================

@@ -923,8 +923,11 @@ class PreviewHandler {
             'layoutMap': 'LayoutMapMapper'
         };
 
+        // 페이지가 이미 자체적으로 매핑을 끝냈으면 재매핑하지 않는다.
+        // (재매핑하면 히어로 슬라이드 DOM이 다시 생성돼 첫 슬라이드 줌 애니메이션이 끊긴다)
         const mapperClass = mapperConfig[currentPage];
-        if (mapperClass && window[mapperClass]) {
+        const selfMapped = window.__pageSelfMapped || window.__pageSelfMapping;
+        if (mapperClass && window[mapperClass] && !selfMapped) {
             const mapper = new window[mapperClass]();
             await mapper.initialize(); // 데이터 로드 후 매핑
         }

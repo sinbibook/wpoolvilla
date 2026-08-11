@@ -465,9 +465,19 @@ class BaseDataMapper {
      * 페이지별 초기화 (서브클래스에서 오버라이드)
      */
     async initialize() {
+        // 매핑 시작 표시 (아직 끝나지 않았어도 fallback이 끼어들지 않도록)
+        if (this.isPageMapper !== false) {
+            window.__pageSelfMapping = true;
+        }
+
         try {
             await this.loadData();
             await this.mapPage();
+            // 페이지가 자체 매핑을 마쳤음을 표시 (preview-handler의 fallback 중복 매핑 방지)
+            // header/footer 매퍼는 페이지 본문 매핑이 아니므로 제외
+            if (this.isPageMapper !== false) {
+                window.__pageSelfMapped = true;
+            }
         } catch (error) {
             console.error('Failed to initialize mapper:', error);
         }

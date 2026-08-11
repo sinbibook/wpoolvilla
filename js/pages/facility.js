@@ -64,12 +64,22 @@ window.initFacilityHeroSlider = function initHeroSlider() {
             newImg.style.transform = 'scale(1)';
 
             // 다음 프레임에서 트랜지션 복원 및 줌인
-            requestAnimationFrame(() => {
-                newImg.style.transition = 'transform 3s ease-out';
+            const startZoom = () => {
                 requestAnimationFrame(() => {
-                    newImg.style.transform = 'scale(1.12)';
+                    newImg.style.transition = 'transform 3s ease-out';
+                    requestAnimationFrame(() => {
+                        newImg.style.transform = 'scale(1.12)';
+                    });
                 });
-            });
+            };
+
+            // 이미지가 아직 로드 전이면 로드 후에 줌 시작
+            // (그리기 전에 줌이 진행되면 이미지가 나타나는 순간 튀어 보임)
+            if (newImg.complete && newImg.naturalWidth > 0) {
+                startZoom();
+            } else {
+                newImg.addEventListener('load', startZoom, { once: true });
+            }
         }
 
         // 이전 슬라이드 줌 리셋 (다음 사용을 위해)

@@ -423,9 +423,13 @@ if (typeof module !== 'undefined' && module.exports) {
 // DOMContentLoaded 초기화
 document.addEventListener('DOMContentLoaded', async () => {
     const reservationMapper = new ReservationMapper();
+    window.__pageSelfMapping = true; // fallback 재매핑 방지 (매핑 시작 표시)
     try {
         await reservationMapper.loadData();
         await reservationMapper.mapPage();
+
+        // 자체 매핑 완료 표시 (preview-handler fallback 중복 매핑 방지)
+        window.__pageSelfMapped = true;
     } catch (error) {
         console.error('Error initializing reservation mapper:', error);
     }
